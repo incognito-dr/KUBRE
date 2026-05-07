@@ -33,6 +33,50 @@ nav.scrolled{box-shadow:0 2px 24px rgba(13,27,62,.08);}
 .nav-links{display:flex;align-items:center;gap:0;}
 .nav-link{font-size:14px;font-weight:500;color:var(--muted);padding:8px 18px;border-bottom:2px solid transparent;transition:all .2s;cursor:pointer;background:none;border-top:none;border-left:none;border-right:none;font-family:'Epilogue',sans-serif;white-space:nowrap;}
 .nav-link:hover,.nav-link.active{color:var(--blue);border-bottom-color:var(--blue);}
+.nav-pill{
+  background:linear-gradient(135deg,var(--blue),#7B7CFF) !important;
+  color:var(--white) !important;
+  border-radius:50px !important;
+  border-bottom:none !important;
+  padding:7px 16px !important;
+  margin:auto 6px !important;
+  font-weight:600 !important;
+  font-size:13px !important;
+  white-space:nowrap;
+  box-shadow:0 2px 12px rgba(79,80,255,.3);
+  transition:all .25s !important;
+  position:relative;
+}
+.nav-pill::after{
+  content:'';
+  position:absolute;
+  inset:-1px;
+  border-radius:50px;
+  background:linear-gradient(135deg,rgba(255,255,255,.15),transparent);
+  pointer-events:none;
+}
+.nav-pill:hover{
+  transform:translateY(-1px) !important;
+  box-shadow:0 6px 20px rgba(79,80,255,.45) !important;
+  color:var(--white) !important;
+  border-bottom:none !important;
+}
+.nav-pill.active{
+  background:linear-gradient(135deg,#3b3ce0,#6364d8) !important;
+  color:var(--white) !important;
+  border-bottom:none !important;
+  box-shadow:0 4px 16px rgba(79,80,255,.5) !important;
+}
+.mobile-nav-pill{
+  background:linear-gradient(135deg,var(--blue),#7B7CFF);
+  color:var(--white) !important;
+  border-radius:12px !important;
+  padding:14px 18px !important;
+  border-bottom:none !important;
+  font-weight:600 !important;
+  box-shadow:0 2px 12px rgba(79,80,255,.25);
+  margin-bottom:2px;
+}
 .nav-right{display:flex;align-items:center;gap:12px;}
 .lang-toggle{display:flex;background:var(--cream2);border-radius:20px;padding:2px;gap:2px;}
 .lang-btn{font-size:12px;font-weight:600;padding:4px 10px;border-radius:16px;border:none;background:transparent;cursor:pointer;color:var(--muted);font-family:'Epilogue',sans-serif;transition:all .2s;}
@@ -331,7 +375,7 @@ footer{background:var(--navy2);padding:3.5rem 2.5rem 2rem;}
     <button class="nav-link" onclick="showPage('salud')" id="nl-salud" data-es="Seguro Medico" data-en="Health Insurance">Seguro Medico</button>
     <button class="nav-link" onclick="showPage('vida')" id="nl-vida" data-es="Seguro de Vida" data-en="Life Insurance">Seguro de Vida</button>
     <button class="nav-link" onclick="showPage('vehiculo')" id="nl-vehiculo" data-es="Seguro Vehicular" data-en="Vehicle Insurance">Seguro Vehicular</button>
-    <button class="nav-link" onclick="showPage('maternidad')" id="nl-maternidad" data-es="Maternidad" data-en="Maternity">Maternidad</button>
+    <button class="nav-link nav-pill" onclick="showPage('maternidad')" id="nl-maternidad" data-es="🤰 ¿Cuánto cuesta un embarazo?" data-en="🤰 How much does pregnancy cost?">🤰 ¿Cuánto cuesta un embarazo?</button>
     <button class="nav-link" onclick="showPage('ai')" id="nl-ai" data-es="Asesor IA" data-en="AI Advisor">Asesor IA</button>
   </div>
   <div class="nav-right">
@@ -348,7 +392,7 @@ footer{background:var(--navy2);padding:3.5rem 2.5rem 2rem;}
   <div class="mobile-nav-link" onclick="showPage('salud');toggleMenu()">Seguro Medico</div>
   <div class="mobile-nav-link" onclick="showPage('vida');toggleMenu()">Seguro de Vida</div>
   <div class="mobile-nav-link" onclick="showPage('vehiculo');toggleMenu()">Seguro Vehicular</div>
-  <div class="mobile-nav-link" onclick="showPage('maternidad');toggleMenu()">Maternidad</div>
+  <div class="mobile-nav-link mobile-nav-pill" onclick="showPage('maternidad');toggleMenu()">🤰 ¿Cuánto cuesta un embarazo?</div>
   <div class="mobile-nav-link" onclick="showPage('ai');toggleMenu()">Asesor IA</div>
   <button class="btn-primary" style="margin-top:1rem;" onclick="openLead('general');toggleMenu()">Hablar con un asesor</button>
 </div>
@@ -675,7 +719,7 @@ footer{background:var(--navy2);padding:3.5rem 2.5rem 2rem;}
         <a onclick="showPage('salud')" data-es="Seguro Medico" data-en="Health Insurance">Seguro Medico</a>
         <a onclick="showPage('vehiculo')" data-es="Seguro Vehicular" data-en="Vehicle Insurance">Seguro Vehicular</a>
         <a onclick="showPage('vida')" data-es="Seguro de Vida" data-en="Life Insurance">Seguro de Vida</a>
-        <a onclick="showPage('maternidad')" data-es="Maternidad" data-en="Maternity">Maternidad</a>
+        <a onclick="showPage('maternidad')" data-es="Calculadora Maternidad" data-en="Pregnancy Calculator">Calculadora Maternidad</a>
       </div>
       <div class="foot-col">
         <h4 data-es="Recursos" data-en="Resources">Recursos</h4>
