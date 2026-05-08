@@ -4,6 +4,31 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>kubre — Seguros que te cubren de verdad</title>
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="alternate icon" href="favicon.svg">
+<meta name="theme-color" content="#4f50ff">
+
+<!-- Open Graph / Facebook / WhatsApp preview -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://kubre.do/">
+<meta property="og:title" content="kubre — Seguros que te cubren de verdad">
+<meta property="og:description" content="Comparamos +13 aseguradoras en RD para encontrar el plan correcto. Tu carro. Tu vida. Tu maternidad. Tu familia.">
+<meta property="og:image" content="https://kubre.do/kubre-preview.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="es_DO">
+<meta property="og:site_name" content="kubre">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="kubre — Seguros que te cubren de verdad">
+<meta name="twitter:description" content="Comparamos +13 aseguradoras en RD. Tu carro. Tu vida. Tu maternidad. Tu familia.">
+<meta name="twitter:image" content="https://kubre.do/kubre-preview.png">
+
+<!-- WhatsApp specifically uses og:image, og:title, og:description -->
+<meta name="description" content="Comparamos +13 aseguradoras en RD para encontrar el plan correcto. Tu carro. Tu vida. Tu maternidad. Tu familia.">
 <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -353,6 +378,184 @@ footer{background:var(--navy2);padding:3.5rem 2.5rem 2rem;}
   .foot-top{grid-template-columns:1fr;}
   .wa-label{display:none;}
 }
+
+/* ═══════════════════════════════════════ */
+/* PREMIUM UI UPGRADES — Round 2          */
+/* ═══════════════════════════════════════ */
+/* Hero v2 — clean editorial headline (Linear/Stripe style) */
+.hero-h1-v2{display:flex;flex-direction:column;gap:.1em;margin-bottom:1.5rem;line-height:1.05;letter-spacing:-1px;font-size:clamp(36px,5vw,62px);}
+.h1-line-strong{font-weight:700;color:var(--white);}
+.h1-line-soft{font-weight:400;color:rgba(255,255,255,.55);}
+.hero-tags-row{display:flex;align-items:center;gap:10px;margin-top:1.5rem;font-size:13px;font-weight:500;color:rgba(255,255,255,.5);letter-spacing:.02em;flex-wrap:wrap;}
+.hero-tags-row .dot-sep{color:rgba(255,255,255,.25);}
+
+/* 4-column product grid */
+.prod-grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:3rem;}
+@media(max-width:1024px){.prod-grid-4{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:600px){.prod-grid-4{grid-template-columns:1fr;}}
+
+
+/* Hero — Stats Row (replaces hcards) */
+.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:2.5rem;border-top:1px solid rgba(255,255,255,.1);padding-top:2rem;}
+.hstat{position:relative;padding-right:1.5rem;}
+.hstat:not(:last-child)::after{content:'';position:absolute;right:0;top:0;bottom:0;width:1px;background:rgba(255,255,255,.1);}
+.hstat-num{font-size:clamp(28px,3.5vw,42px);font-weight:700;color:var(--white);line-height:1;letter-spacing:-1px;background:linear-gradient(135deg,#ffffff,#a5b4ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:6px;}
+.hstat-label{font-size:11px;font-weight:700;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.1em;margin-bottom:4px;}
+.hstat-desc{font-size:13px;color:rgba(255,255,255,.55);line-height:1.4;}
+
+/* Hero — Right side product preview card */
+.hero-preview{position:relative;}
+.preview-frame{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:24px;padding:1.25rem;backdrop-filter:blur(12px);box-shadow:0 24px 80px rgba(0,0,0,.3);position:relative;overflow:hidden;}
+.preview-frame::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at top right,rgba(79,80,255,.15),transparent 60%);pointer-events:none;}
+.preview-tab{display:flex;gap:6px;margin-bottom:1rem;}
+.preview-tab span{height:8px;width:8px;border-radius:50%;background:rgba(255,255,255,.15);}
+.preview-tab span:first-child{background:#ff5f57;}
+.preview-tab span:nth-child(2){background:#febc2e;}
+.preview-tab span:nth-child(3){background:#28c840;}
+.preview-mock{display:flex;flex-direction:column;gap:10px;}
+.pmock-row{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:14px 16px;display:flex;align-items:center;gap:12px;transition:transform .35s;animation:floatRow 4s ease-in-out infinite;}
+.pmock-row:nth-child(2){animation-delay:.5s;background:rgba(79,80,255,.12);border-color:rgba(79,80,255,.25);}
+.pmock-row:nth-child(3){animation-delay:1s;}
+@keyframes floatRow{0%,100%{transform:translateX(0);}50%{transform:translateX(3px);}}
+.pmock-icon{width:36px;height:36px;border-radius:10px;background:rgba(79,80,255,.2);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}
+.pmock-row:nth-child(2) .pmock-icon{background:rgba(165,180,255,.3);}
+.pmock-info{flex:1;min-width:0;}
+.pmock-name{font-size:13px;font-weight:600;color:rgba(255,255,255,.9);}
+.pmock-sub{font-size:11px;color:rgba(255,255,255,.4);margin-top:1px;}
+.pmock-price{font-size:14px;font-weight:700;color:var(--white);text-align:right;flex-shrink:0;}
+.pmock-bar{display:flex;gap:3px;margin-top:4px;}
+.pmock-bar span{height:3px;flex:1;background:rgba(255,255,255,.1);border-radius:3px;}
+.pmock-bar span.on{background:linear-gradient(90deg,var(--blue),#a5b4ff);}
+.preview-badge{position:absolute;top:-10px;right:20px;background:linear-gradient(135deg,#10b981,#059669);color:white;font-size:10px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.05em;text-transform:uppercase;box-shadow:0 4px 12px rgba(16,185,129,.4);}
+.preview-floating-card{position:absolute;bottom:-20px;left:-20px;background:var(--white);border-radius:14px;padding:12px 16px;box-shadow:0 12px 32px rgba(13,27,62,.25);display:flex;align-items:center;gap:10px;font-family:'Epilogue',sans-serif;animation:floatCard 5s ease-in-out infinite;}
+@keyframes floatCard{0%,100%{transform:translateY(0);}50%{transform:translateY(-6px);}}
+.pfc-emoji{font-size:24px;}
+.pfc-num{font-size:18px;font-weight:700;color:var(--navy);}
+.pfc-label{font-size:11px;color:var(--muted);}
+
+/* Premium product cards */
+.prod-card-v2{background:var(--white);border:1px solid var(--border);border-radius:20px;padding:2rem 1.75rem;cursor:pointer;transition:all .35s cubic-bezier(.4,0,.2,1);position:relative;overflow:hidden;display:flex;flex-direction:column;min-height:340px;}
+.prod-card-v2::before{content:attr(data-num);position:absolute;top:1rem;right:1.5rem;font-size:80px;font-weight:800;color:rgba(79,80,255,.04);line-height:1;font-family:'Epilogue',sans-serif;letter-spacing:-2px;transition:color .35s;}
+.prod-card-v2:hover::before{color:rgba(79,80,255,.08);}
+.prod-card-v2::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(79,80,255,.04) 0%,transparent 50%);opacity:0;transition:opacity .35s;pointer-events:none;}
+.prod-card-v2:hover{box-shadow:0 24px 60px rgba(13,27,62,.12);transform:translateY(-6px);border-color:rgba(79,80,255,.3);}
+.prod-card-v2:hover::after{opacity:1;}
+.prod-card-v2.featured{background:linear-gradient(135deg,rgba(79,80,255,.03),var(--white));border-color:rgba(79,80,255,.25);}
+.prod-badge{position:absolute;top:1rem;right:1rem;background:linear-gradient(135deg,#10b981,#059669);color:white;font-size:10px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.05em;text-transform:uppercase;box-shadow:0 2px 8px rgba(16,185,129,.3);z-index:2;}
+.pcv2-icon-wrap{width:60px;height:60px;background:linear-gradient(135deg,rgba(79,80,255,.1),rgba(79,80,255,.03));border-radius:16px;display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;position:relative;z-index:1;transition:all .35s;}
+.prod-card-v2:hover .pcv2-icon-wrap{background:linear-gradient(135deg,var(--blue),#7b7cff);transform:scale(1.05);}
+.pcv2-icon-wrap svg{width:36px;height:36px;transition:filter .35s;}
+.prod-card-v2:hover .pcv2-icon-wrap svg{filter:brightness(0) invert(1);}
+.pcv2-title{font-size:22px;font-weight:700;color:var(--navy);margin-bottom:.5rem;position:relative;z-index:1;}
+.pcv2-desc{font-size:14px;color:var(--muted);line-height:1.65;margin-bottom:1.5rem;position:relative;z-index:1;flex:1;}
+.pcv2-features{display:flex;flex-direction:column;gap:8px;margin-bottom:1.5rem;position:relative;z-index:1;}
+.pcv2-feat{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text);}
+.pcv2-feat::before{content:'✓';color:var(--green);font-weight:700;flex-shrink:0;}
+.pcv2-link{font-size:14px;font-weight:600;color:var(--blue);display:inline-flex;align-items:center;gap:6px;transition:gap .25s;position:relative;z-index:1;}
+.prod-card-v2:hover .pcv2-link{gap:12px;}
+
+/* Insurers — Marquee + wordmarks */
+.insurers-section-v2{background:var(--navy);padding:5rem 0 4rem;overflow:hidden;position:relative;}
+.insurers-section-v2::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(79,80,255,.08),transparent 70%);pointer-events:none;}
+.insurers-header{max-width:1100px;margin:0 auto 3rem;padding:0 2.5rem;text-align:center;}
+.insurers-header .slabel{display:inline-block;}
+.marquee-wrap{position:relative;mask-image:linear-gradient(90deg,transparent 0%,#000 8%,#000 92%,transparent 100%);-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 8%,#000 92%,transparent 100%);}
+.marquee-track{display:flex;gap:3rem;animation:marquee 35s linear infinite;width:max-content;}
+.marquee-track:hover{animation-play-state:paused;}
+@keyframes marquee{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+.wordmark{flex-shrink:0;display:flex;align-items:center;justify-content:center;height:80px;padding:0 2rem;color:rgba(255,255,255,.55);font-family:'Epilogue',sans-serif;letter-spacing:-.5px;transition:color .25s;cursor:default;white-space:nowrap;}
+.wordmark:hover{color:rgba(255,255,255,.95);}
+.wm-1{font-size:26px;font-weight:700;font-style:italic;}
+.wm-2{font-size:22px;font-weight:600;letter-spacing:1px;text-transform:uppercase;}
+.wm-3{font-size:24px;font-weight:300;}
+.wm-4{font-size:28px;font-weight:800;}
+.wm-5{font-size:22px;font-weight:500;font-variant:small-caps;}
+.wm-6{font-size:25px;font-weight:600;font-style:italic;letter-spacing:.5px;}
+.wm-7{font-size:23px;font-weight:700;letter-spacing:2px;text-transform:uppercase;}
+.wm-8{font-size:26px;font-weight:400;letter-spacing:-1px;}
+
+/* How it works v2 — connected steps */
+.steps-v2{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:3rem;position:relative;}
+.steps-v2::before{content:'';position:absolute;top:48px;left:16%;right:16%;height:2px;background:linear-gradient(90deg,transparent 0%,var(--border) 8%,var(--border) 92%,transparent 100%);z-index:0;}
+.step-v2{position:relative;padding:0 1rem;text-align:center;z-index:1;}
+.step-num-v2{width:96px;height:96px;background:var(--white);border:2px solid var(--border);color:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;position:relative;font-size:32px;font-weight:700;box-shadow:0 8px 24px rgba(13,27,62,.06);transition:all .3s;}
+.step-num-v2::after{content:'';position:absolute;inset:-4px;border:2px dashed rgba(79,80,255,.2);border-radius:50%;animation:rotate 30s linear infinite;}
+@keyframes rotate{from{transform:rotate(0);}to{transform:rotate(360deg);}}
+.step-v2:hover .step-num-v2{transform:translateY(-4px);box-shadow:0 12px 32px rgba(79,80,255,.15);border-color:var(--blue);color:var(--blue);}
+.step-illust{font-size:24px;margin-top:-2px;}
+.step-v2 .step-title{font-size:18px;font-weight:700;color:var(--navy);margin-bottom:.5rem;}
+.step-v2 .step-desc{font-size:14px;color:var(--muted);line-height:1.65;max-width:280px;margin:0 auto;}
+.step-tag{display:inline-block;background:var(--blue-lt);color:var(--blue);font-size:10px;font-weight:700;padding:3px 10px;border-radius:20px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.75rem;}
+
+/* Social Proof — testimonials section */
+.social-proof{background:var(--cream);padding:5rem 2.5rem;}
+.testimonial-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:3rem;}
+.testimonial{background:var(--white);border:1px solid var(--border);border-radius:20px;padding:1.75rem;position:relative;transition:all .25s;}
+.testimonial:hover{box-shadow:0 16px 40px rgba(13,27,62,.08);transform:translateY(-3px);}
+.testimonial::before{content:'"';position:absolute;top:.5rem;right:1.25rem;font-size:80px;font-family:'Epilogue',sans-serif;color:rgba(79,80,255,.1);line-height:1;font-weight:700;}
+.tstars{display:flex;gap:2px;margin-bottom:1rem;color:#fbbf24;font-size:14px;}
+.ttext{font-size:14.5px;color:var(--text);line-height:1.65;margin-bottom:1.25rem;position:relative;z-index:1;}
+.tauthor{display:flex;align-items:center;gap:12px;}
+.tav{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--blue),#7b7cff);color:white;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;flex-shrink:0;}
+.tav.t2{background:linear-gradient(135deg,#10b981,#059669);}
+.tav.t3{background:linear-gradient(135deg,#f59e0b,#d97706);}
+.tname{font-size:14px;font-weight:600;color:var(--navy);}
+.trole{font-size:12px;color:var(--muted);}
+.trust-strip{display:flex;justify-content:center;align-items:center;gap:3rem;margin-top:3rem;padding-top:2.5rem;border-top:1px solid var(--border);flex-wrap:wrap;}
+.trust-item{display:flex;align-items:center;gap:10px;color:var(--muted);font-size:13px;font-weight:500;}
+.trust-icon{width:32px;height:32px;background:var(--white);border:1px solid var(--border);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;}
+
+/* CTA Band v2 — mesh gradient + lines */
+.cta-band-v2{background:linear-gradient(135deg,var(--navy) 0%,#162d6e 50%,var(--navy) 100%);padding:6rem 2.5rem;text-align:center;position:relative;overflow:hidden;}
+.cta-band-v2::before{content:'';position:absolute;inset:0;background:
+  radial-gradient(ellipse 60% 50% at 20% 30%,rgba(79,80,255,.25),transparent 50%),
+  radial-gradient(ellipse 50% 40% at 80% 70%,rgba(120,100,255,.18),transparent 50%),
+  radial-gradient(ellipse 40% 60% at 50% 100%,rgba(165,180,255,.1),transparent 60%);pointer-events:none;}
+.cta-band-v2::after{content:'';position:absolute;inset:0;background-image:
+  linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),
+  linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:80px 80px;pointer-events:none;mask-image:radial-gradient(ellipse 80% 60% at center,#000,transparent);-webkit-mask-image:radial-gradient(ellipse 80% 60% at center,#000,transparent);}
+.cta-content-v2{position:relative;z-index:2;}
+.cta-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(79,80,255,.2);border:1px solid rgba(79,80,255,.4);color:#a5b4ff;padding:6px 14px;border-radius:20px;font-size:12px;font-weight:600;letter-spacing:.05em;margin-bottom:1.5rem;backdrop-filter:blur(8px);}
+.cta-eyebrow .tag-dot{background:#10b981;}
+.cta-band-v2 h2{font-size:clamp(28px,4.5vw,48px);font-weight:700;color:var(--white);margin-bottom:1rem;line-height:1.1;letter-spacing:-.5px;}
+.cta-band-v2 h2 em{font-style:italic;background:linear-gradient(135deg,#a5b4ff,#7b7cff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.cta-band-v2 p{color:rgba(255,255,255,.65);font-size:17px;margin-bottom:2.5rem;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.6;}
+.cta-buttons{display:inline-flex;gap:12px;flex-wrap:wrap;justify-content:center;}
+.cta-buttons .btn-primary{padding:16px 32px;font-size:16px;}
+.cta-stats-row{display:flex;gap:3rem;justify-content:center;margin-top:3rem;padding-top:2.5rem;border-top:1px solid rgba(255,255,255,.1);flex-wrap:wrap;}
+.cta-stat{text-align:left;}
+.cta-stat-num{font-size:24px;font-weight:700;color:var(--white);line-height:1;}
+.cta-stat-lbl{font-size:11px;font-weight:600;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.1em;margin-top:4px;}
+
+/* Improved insurer cards (still) */
+.insurer-card-v3{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:1.5rem 1rem;display:flex;align-items:center;justify-content:center;height:90px;transition:all .25s;}
+.insurer-card-v3:hover{background:rgba(255,255,255,.1);border-color:rgba(79,80,255,.4);transform:translateY(-2px);}
+
+/* Enhanced ticker */
+.ticker-outer{background:linear-gradient(90deg,#e8f5fb,#eef0ff,#dde3ff,#eef0ff,#e8f5fb);background-size:200% 100%;animation:tickerBg 8s ease-in-out infinite;}
+@keyframes tickerBg{0%,100%{background-position:0% 50%;}50%{background-position:100% 50%;}}
+.t-dot{background:linear-gradient(135deg,var(--blue),#7b7cff);box-shadow:0 0 8px rgba(79,80,255,.4);}
+
+/* Responsive */
+@media(max-width:960px){
+  .hero-stats{grid-template-columns:1fr 1fr;gap:1.5rem;}
+  .hstat:nth-child(3){grid-column:1/-1;border-top:1px solid rgba(255,255,255,.1);padding-top:1.5rem;}
+  .hstat:not(:last-child)::after{display:none;}
+  .testimonial-grid{grid-template-columns:1fr;}
+  .steps-v2{grid-template-columns:1fr;gap:2rem;}
+  .steps-v2::before{display:none;}
+  .hero-preview{display:none;}
+  .cta-stats-row{gap:2rem;}
+}
+@media(max-width:600px){
+  .hero-stats{grid-template-columns:1fr;}
+  .hstat{padding-right:0;border-bottom:1px solid rgba(255,255,255,.08);padding-bottom:1.25rem;}
+  .hstat:last-child{border-bottom:none;padding-bottom:0;}
+  .hstat:not(:last-child)::after{display:none;}
+  .trust-strip{gap:1.25rem;}
+  .testimonial{padding:1.5rem;}
+}
+
 </style>
 </head>
 <body>
@@ -410,29 +613,80 @@ footer{background:var(--navy2);padding:3.5rem 2.5rem 2rem;}
   </div>
   <div class="hero-inner">
     <div>
-      <div class="hero-tag"><div class="tag-dot"></div><span data-es="Corredores certificados SISDOM en RD" data-en="SISDOM certified brokers in DR">Corredores certificados SISDOM en RD</span></div>
-      <h1 data-es="El seguro correcto,<br><em>sin el dolor<br>de cabeza.</em>" data-en="The right coverage,<br><em>without the<br>headache.</em>">El seguro correcto,<br><em>sin el dolor<br>de cabeza.</em></h1>
-      <p class="hero-sub" data-es="Comparamos mas de 13 aseguradoras en RD para encontrar el plan que se adapta a ti. Sin letra pequeña, sin comisiones ocultas." data-en="We compare 13+ insurers in DR to find the plan that fits you. No fine print, no hidden fees.">Comparamos mas de 13 aseguradoras en RD para encontrar el plan que se adapta a ti. Sin letra pequeña, sin comisiones ocultas.</p>
+      <h1 class="hero-h1-v2">
+        <span class="h1-line-strong" data-es="El seguro correcto." data-en="The right coverage.">El seguro correcto.</span>
+        <span class="h1-line-soft" data-es="Sin dolor de cabeza." data-en="No headache.">Sin dolor de cabeza.</span>
+      </h1>
+      <p class="hero-sub" data-es="Comparamos mas de 13 aseguradoras en RD para encontrar el plan que se adapta a ti. Sin letra pequena, sin comisiones ocultas." data-en="We compare 13+ insurers in DR to find the plan that fits you. No fine print, no hidden fees.">Comparamos mas de 13 aseguradoras en RD para encontrar el plan que se adapta a ti. Sin letra pequena, sin comisiones ocultas.</p>
       <div class="hero-btns">
         <button class="btn-primary" onclick="scrollToPlans()" data-es="Ver mis opciones" data-en="See my options">Ver mis opciones</button>
         <button class="btn-ghost" onclick="openLead('general')" data-es="Hablar con un asesor" data-en="Talk to an advisor">Hablar con un asesor</button>
       </div>
+      <div class="hero-tags-row">
+        <span data-es="Corredores SISDOM" data-en="SISDOM brokers">Corredores SISDOM</span>
+        <span class="dot-sep">·</span>
+        <span data-es="Multi-aseguradora" data-en="Multi-insurer">Multi-aseguradora</span>
+        <span class="dot-sep">·</span>
+        <span data-es="Asesoria gratuita" data-en="Free advisory">Asesoria gratuita</span>
+      </div>
+      <div class="hero-stats">
+        <div class="hstat">
+          <div class="hstat-label" data-es="Asesoria" data-en="Advisory">Asesoria</div>
+          <div class="hstat-num">RD$0</div>
+          <div class="hstat-desc" data-es="Sin costo para ti, siempre" data-en="Always free for you">Sin costo para ti, siempre</div>
+        </div>
+        <div class="hstat">
+          <div class="hstat-label" data-es="Aseguradoras" data-en="Insurers">Aseguradoras</div>
+          <div class="hstat-num">+13</div>
+          <div class="hstat-desc" data-es="Comparamos todas por ti" data-en="We compare them all">Comparamos todas por ti</div>
+        </div>
+        <div class="hstat">
+          <div class="hstat-label" data-es="Tiempo respuesta" data-en="Response time">Tiempo respuesta</div>
+          <div class="hstat-num">&lt;1hr</div>
+          <div class="hstat-desc" data-es="Un asesor te contacta hoy" data-en="An advisor contacts you today">Un asesor te contacta hoy</div>
+        </div>
+      </div>
     </div>
-    <div class="hero-cards">
-      <div class="hcard">
-        <div class="hcard-label" data-es="Sin costo de asesoria" data-en="Free advisory">Sin costo de asesoria</div>
-        <div class="hcard-title" data-es="Te encontramos el plan correcto sin cobrarte nada" data-en="We find you the right plan at no cost">Te encontramos el plan correcto sin cobrarte nada</div>
-        <div class="hcard-sub" data-es="Comparamos +13 aseguradoras por ti" data-en="We compare 13+ insurers for you">Comparamos +13 aseguradoras por ti</div>
+    <div class="hero-preview">
+      <div class="preview-frame">
+        <div class="preview-badge">Live · 4 planes</div>
+        <div class="preview-tab"><span></span><span></span><span></span></div>
+        <div class="preview-mock">
+          <div class="pmock-row">
+            <div class="pmock-icon">🏥</div>
+            <div class="pmock-info">
+              <div class="pmock-name">Humano · Plan Familiar</div>
+              <div class="pmock-sub" data-es="Cobertura completa · 2 adultos + 2 niños" data-en="Full coverage · 2 adults + 2 kids">Cobertura completa · 2 adultos + 2 niños</div>
+              <div class="pmock-bar"><span class="on"></span><span class="on"></span><span class="on"></span><span class="on"></span><span></span></div>
+            </div>
+            <div class="pmock-price">RD$8,400<div style="font-size:10px;color:rgba(255,255,255,.4);font-weight:400;" data-es="/mes" data-en="/mo">/mes</div></div>
+          </div>
+          <div class="pmock-row">
+            <div class="pmock-icon">⭐</div>
+            <div class="pmock-info">
+              <div class="pmock-name">Universal · Premium Gold</div>
+              <div class="pmock-sub" data-es="Mejor cobertura · Recomendado" data-en="Best coverage · Recommended">Mejor cobertura · Recomendado</div>
+              <div class="pmock-bar"><span class="on"></span><span class="on"></span><span class="on"></span><span class="on"></span><span class="on"></span></div>
+            </div>
+            <div class="pmock-price">RD$11,200<div style="font-size:10px;color:rgba(255,255,255,.4);font-weight:400;" data-es="/mes" data-en="/mo">/mes</div></div>
+          </div>
+          <div class="pmock-row">
+            <div class="pmock-icon">🛡️</div>
+            <div class="pmock-info">
+              <div class="pmock-name">Mapfre BHD · Salud Total</div>
+              <div class="pmock-sub" data-es="Buena relacion precio-cobertura" data-en="Best price-coverage ratio">Buena relacion precio-cobertura</div>
+              <div class="pmock-bar"><span class="on"></span><span class="on"></span><span class="on"></span><span></span><span></span></div>
+            </div>
+            <div class="pmock-price">RD$6,200<div style="font-size:10px;color:rgba(255,255,255,.4);font-weight:400;" data-es="/mes" data-en="/mo">/mes</div></div>
+          </div>
+        </div>
       </div>
-      <div class="hcard">
-        <div class="hcard-label" data-es="Respuesta rapida" data-en="Fast response">Respuesta rapida</div>
-        <div class="hcard-title" data-es="Un asesor te contacta en menos de 1 hora" data-en="An advisor reaches you in under 1 hour">Un asesor te contacta en menos de 1 hora</div>
-        <div class="hcard-sub" data-es="Lunes a viernes 8am - 6pm" data-en="Monday to Friday 8am - 6pm">Lunes a viernes 8am - 6pm</div>
-      </div>
-      <div class="hcard">
-        <div class="hcard-label" data-es="Certificados y confiables" data-en="Certified and trusted">Certificados y confiables</div>
-        <div class="hcard-title" data-es="Corredores independientes certificados en RD" data-en="Independent certified brokers in DR">Corredores independientes certificados en RD</div>
-        <div class="hcard-sub" data-es="Multi-aseguradora · Sin conflicto de interes" data-en="Multi-insurer · No conflict of interest">Multi-aseguradora · Sin conflicto de interes</div>
+      <div class="preview-floating-card">
+        <div class="pfc-emoji">💚</div>
+        <div>
+          <div class="pfc-num" data-es="Ahorras RD$3,000" data-en="You save RD$3,000">Ahorras RD$3,000</div>
+          <div class="pfc-label" data-es="Comparado con tu plan actual" data-en="Compared to your current plan">Comparado con tu plan actual</div>
+        </div>
       </div>
     </div>
   </div>
@@ -444,33 +698,60 @@ footer{background:var(--navy2);padding:3.5rem 2.5rem 2rem;}
     <div class="slabel" data-es="Nuestros planes" data-en="Our plans">Nuestros planes</div>
     <h2 class="stitle" data-es="Todo lo que necesitas,<br>en un solo lugar." data-en="Everything you need,<br>in one place.">Todo lo que necesitas,<br>en un solo lugar.</h2>
     <p class="ssub" data-es="Salud, vida, vehiculo y maternidad. Te cubrimos donde mas importa." data-en="Health, life, vehicle and maternity. We cover you where it matters most.">Salud, vida, vehiculo y maternidad. Te cubrimos donde mas importa.</p>
-    <div class="prod-grid">
-      <div class="prod-card" onclick="showPage('salud')">
-        <div class="prod-card-bar"></div>
-        <div class="prod-icon">
+    <div class="prod-grid-4">
+      <div class="prod-card-v2 featured" data-num="01" onclick="showPage('salud')">
+        <div class="prod-badge" data-es="Lo mas popular" data-en="Most popular">Lo mas popular</div>
+        <div class="pcv2-icon-wrap">
           <svg viewBox="0 0 144 144" xmlns="http://www.w3.org/2000/svg"><path fill="#4f50ff" d="M84.68,92.37l-.03-.24c0-.08-.05-.15-.14-.14v-.1c-.03-.07-.07-.14-.12-.18-.03-.11-.04-.24-.03-.36,0-.11.01-.22-.08-.3l.11-.4c.2-.75.72-1.3,1.51-1.48.35-.08.79-.1,1.16-.06,1.02.11,1.97.48,2.89.94l.79.51c1.64,1.07,3.14,3.86,3.65,5.82,1.07,4.05,1.46,8.67.35,12.64-.06.2-.25.44-.25.68l-.14.27-.39.8c-.91,1.87-3.09,3.53-5.31,3.71l-1.84-.05c-1.73-.05-3.89-2.37-5.78-.46l-2.97,3.01-2.35,2.35c-3.76,3.75-7.94,6.92-12.65,9.44-7.54,4.04-17.03,5.91-25.36,3.78-2.81-.72-5.37-1.99-7.5-3.95-3.98-3.65-5.57-9.29-4.96-14.61.38-3.27,1.02-6.41,2.04-9.53.55-1.7,1.3-3.21,2.18-4.75,2.12-3.73,5.24-6.61,9.08-8.49l3.69-1.67c.77-.35,1.6-.77,2.13-1.46.77-1.01.45-2.38-.34-3.32-.69-.82-1.65-1.15-2.55-1.72-3.17-2.03-4.33-5.99-4.53-9.72-.17-2.98.49-5.9,1.87-8.51,3.75-7.1,11.83-10.18,19.47-7.88,2.59.78,4.67,2.49,6.19,4.72,1.34,1.98,2.06,4.2,2.7,6.5.39,1.43.75,2.77.96,4.25.43,3-.42,5.88-2.34,8.19l-2.18,2.62c-1.04,1.25-1.18,3.14.05,4.32,2.17,2.08,5.46,1.97,8.52,4.79,1.69,1.56,2.03,3.81.6,5.7-1.31,1.75-3.01,3.06-4.81,4.37-5.69,4.15-12.61,7.24-19.59,8.39-1.01.16-1.95.3-2.87.73-.72.33-1.22,1.15-.79,1.9.37.66,1.28.96,2.09.86,3.58-.47,6.91-1.53,10.23-2.95l8.71-4.21c3.57-1.73,7.55-5.42,10.29-8.38.69-.75,1.38-1.47,1.2-2.62l-.45-2.9-1.03-4.83-5.24-25.26-1.17-3.92c-.79-2.64-4.01-5.18-6.69-6.4-5.2-2.37-11.18-2.69-16.62-.9-3.04,1-5.78,2.54-7.96,4.83-4.54,4.77-5.29,10.58-5.48,16.91-.04,1.18-.18,2.31-.63,3.39-.81,1.97-3.28,3.45-5.25,2.4-2.47-1.31-3.74-6.88-3.94-9.95-.52-7.96.17-17.83,2.55-25.48,1.84-5.94,4.82-11.31,9.01-15.91l3.93-3.94c2-2,4.3-3.5,6.63-5.11,3.46-2.39,7.09-4.28,11.05-5.74,4.61-1.69,9.35-2.49,14.26-2.68,5.92-.23,11.68.68,17.28,2.55,2.45.82,4.71,1.6,7.05,2.69,4.28,1.99,8.08,4.71,11.29,8.15.94,1.01,1.8,1.89,2.66,2.98,3.44,4.37,6.44,8.99,9.16,13.85l1.9,3.86c1.22,2.48,2.6,7.42,1.27,9.74-.65,1.13-1.88,1.65-3.05,1.74-2.6.21-4.36-2.51-5.68-4.83-1.53-2.69-3.24-5.18-5.49-7.28-3.57-3.33-8.13-4.92-13.03-4.49-6.01.53-11.67,3.44-15.7,7.9-1.94,2.15-3.38,4.64-3.92,7.52-.4,2.16-.16,4.2.3,6.36l6.01,28.61.83,3.46c.39,1.61,1.49,1.9,3.01,2.43,3.71,1.3,4.33,5.83,3.07,8.9l-1.24,3.04c-.23.55-.4,1.33-.02,1.87.52.73,1.56.91,2.46.79,2.08-.28,2.86-3.21,2.95-5.42.11-2.71-.2-5.38-.96-7.96-.63-2.15-1.87-3.84-4.13-3.98-.66-.04-1.15-.31-1.57-.73Z"/></svg>
         </div>
-        <div class="prod-title" data-es="Seguro Medico" data-en="Health Insurance">Seguro Medico</div>
-        <div class="prod-desc" data-es="Planes individuales, familiares y colectivos. Comparamos las mejores ARS de RD para encontrar el plan correcto para ti." data-en="Individual, family and group plans. We compare the best insurers in DR to find the right plan for you.">Planes individuales, familiares y colectivos. Comparamos las mejores ARS de RD para encontrar el plan correcto para ti.</div>
-        <span class="prod-link" data-es="Ver planes de salud &rarr;" data-en="See health plans &rarr;">Ver planes de salud &rarr;</span>
-      </div>
-      <div class="prod-card" onclick="showPage('vehiculo')">
-        <div class="prod-card-bar"></div>
-        <div class="prod-icon">
-          <svg viewBox="0 0 144 144" xmlns="http://www.w3.org/2000/svg"><path fill="#4f50ff" d="M140.69,82.92c.03-.09.09-.23.08-.33-.41-3.32-1.13-6.56-2.27-9.79-1.07-3.04-2.62-5.76-4.8-8.14-5.28-5.77-13.11-6.74-19.83-8.6l-5.49-1.52c-1.83-.51-3.46-1.42-4.82-2.78l-4.97-5-7.63-8.24-2.91-2.65c-3.79-3.45-8.36-5.59-13.46-6.3-2.85-.4-5.55-.79-8.33-.74l-.53-.06c-7.1-.18-14.2-.22-21.38.17-3.4.19-6.58.64-9.84,1.4-5.72,1.34-10.48,4.41-14.02,9.09-3.91,5.18-8.13,11.18-10.82,17.04-2.54,5.53-3.45,12.71-3.73,18.82l-.14,3c-.12,2.58-.68,4.93-1.75,7.29-1.48,3.27-1.45,7.05-.03,10.29.24.54.53.96.93,1.2-.02.05-.03.1-.03.14.05.33.37.41.55.59l.53.56c1.27,1.34,3.21,1.93,5.02,2.22l.76.12,3.31.05c.57,0,1.18.09,1.67.15l.14.02c.17.16.38.35.61.36h.13s.77.79.77.79v.13c.09.17.2.33.33.46l.02.11c.05.24.17.46.35.62l.03.12c.3,1.3,3.21,4.76,4.76,6.13,2.88,2.55,6.1,4.22,9.84,5.11,1.99.47,3.56.73,5.68.63,3.87-.18,7.66-1.09,10.87-3.12-.02-.07.06-.1.12-.06.78-.36,1.47-.88,2.09-1.47h.13c2.61-2.17,4.59-4.16,6.1-7.23.01-.03.04-.08.04-.11.5-.77.91-1.57,1.7-2.07.03,0,.08,0,.11-.02l.23-.18s.09,0,.13-.01c.15-.02.3-.08.41-.17l.14-.02,2.47-.11,2.52-.11h5.87s6.13,0,6.13,0h.52s2.98.04,2.98.04l1.81.18.13.03.62.33s.1.01.15,0l.99,1.08c.35.38.51.88.86,1.17,0,.04,0,.12.01.16.1.21.23.4.38.59,4.56,7.54,12.74,11.85,21.7,10.95,4.56-.46,8.63-2.12,12.12-5.11,2.27-1.94,4.16-4.32,5.5-7.01.63-1.25,1.52-2.24,3.07-2.31,2.82-.13,5.58-1,7.71-2.81,4.26-3.64,4.44-9.72,3.65-15.05ZM48.52,101.98l-1.55,1.43-.27.2c-.45.32-.99.53-1.38.92-.04,0-.09,0-.12.02l-.24.17s-.09,0-.13.02c-.09.04-.17.13-.21.22-.04,0-.1.01-.13-.06-3.41,1.56-7.28,1.55-10.76.18-.03.08-.08.08-.12.07-.04-.1-.11-.18-.21-.22-.04-.02-.09-.01-.13-.01l-.24-.17s-.09-.01-.13-.01l-.25-.16s-.09-.01-.13,0c-.05-.08-.14-.17-.22-.2l-.16-.02c-.25-.31-.62-.47-.97-.69l-.31-.19c-.1-.17-.24-.3-.43-.37-.02-.06-.11-.13-.16-.17-.56-.43-1.01-.97-1.49-1.5l-.32-.36c-.79-.88-1.29-1.97-1.86-3,0-.04,0-.11-.01-.15l-.34-.82s-.03-.08-.03-.11c.02-.41,0-.87-.35-1.13v-.33s-.28-2.24-.28-2.24v-.5s.28-2.98.28-2.98v-.31c.09-.13.13-.27.16-.42,0-.03.03-.09.02-.13.09-.12.15-.27.16-.43v-.13c.11-.12.16-.27.19-.42,0-.03.03-.08.02-.12l.15-.26s0-.1.01-.14l.73-1.34s.02-.09.02-.12l.71-1v-.13c.24-.16.42-.37.55-.62.2-.1.33-.28.37-.5l.21-.22c.28-.19.51-.43.71-.7.16-.03.27-.12.37-.24l.16-.19,2.11-1.45c.06.04.11.02.14,0,.27.04.55-.07.61-.35.04,0,.09,0,.13-.02l.26-.15s.09-.02.12-.03c.35.03.76-.05.95-.36h.14c.16-.03.3-.08.42-.18l.13-.02,1.46-.24.57-.13h2.95c.1,0,.23.05.33.02.23.15.51.16.78.15.09,0,.23,0,.31.04.19.08.39.12.59.16l.12.02c.13.08.28.13.43.16.04,0,.09,0,.12.02l.43.18s.07.03.1.03l.27.15s.09.02.12.02l.25.16s.1,0,.14.01l.24.16s.1,0,.14,0c.05.07.15.15.23.18h.14c.05.09.13.16.21.2.03.02.09.02.13.02.12.33.49.41.79.53.04.02.09.02.13.02,1.16.9,2.24,1.87,3.14,3.03l.03.11c.12.38.48.66.73.96,0,.04.01.1.03.13l.93,1.7v.15c0,.07.12.18.18.24v.12c.03.36.13.7.33.99l.03.3c.02.22.07.43.18.62.01.03.03.1.03.13l.2,2.19-.22,2.97c0,.09,0,.23-.04.31-.08.19-.12.39-.15.6l-.02.12c-.35.35-.58.88-.53,1.36l.02.17c-.53.57-.75,1.4-1.13,2.05l-.19.33-.86,1.07-.61.62ZM116.4,101.49c-4.97,5.72-13.55,6.23-19.12,1.05-.92-.85-1.66-1.77-2.35-2.77l-.22-.21v-.08s-.8-1.88-.8-1.88c-.16-.38-.13-.81-.48-1.01.02-.04.02-.1.02-.14-.03-.16-.08-.31-.16-.44v-.12s-.28-2.4-.28-2.4v-1.45s.26-2.23.26-2.23l.03-.31c.08-.13.14-.27.17-.42.02-.09.04-.21.03-.3.16-.24.27-.52.32-.8,0-.04,0-.1,0-.14l2.06-3.38.18-.3c.86-.9,1.77-1.71,2.76-2.47.18-.09.42-.17.53-.34.53-.03,1.12-.23,1.38-.72.04,0,.09,0,.13-.02l.26-.15s.09-.02.11-.03c.35.02.76-.05.96-.36.04,0,.1,0,.14-.01.16-.02.3-.07.42-.17l.14-.02c.21-.02.4-.07.59-.16.08-.04.23-.02.32-.03l.61-.12.69-.04h2.77s.5.04.5.04l.61.14c.09.02.23-.01.31.03.19.08.39.12.6.16l.13.02c.23.29.63.29.98.34l.13.02.24.16s.1,0,.15,0l1.33.74s.1.01.13.02c.2.26.53.36.77.52,6.64,4.46,7.97,13.74,2.69,19.81Z"/></svg>
+        <div class="pcv2-title" data-es="Seguro Medico" data-en="Health Insurance">Seguro Medico</div>
+        <div class="pcv2-desc" data-es="Planes individuales, familiares y colectivos. Comparamos las mejores ARS." data-en="Individual, family and group plans.">Planes individuales, familiares y colectivos. Comparamos las mejores ARS.</div>
+        <div class="pcv2-features">
+          <div class="pcv2-feat" data-es="Maternidad y dental" data-en="Maternity & dental">Maternidad y dental</div>
+          <div class="pcv2-feat" data-es="+200 clinicas en red" data-en="200+ clinic network">+200 clinicas en red</div>
+          <div class="pcv2-feat" data-es="Desde RD$3,000/mes" data-en="From RD$3,000/mo">Desde RD$3,000/mes</div>
         </div>
-        <div class="prod-title" data-es="Seguro Vehicular" data-en="Vehicle Insurance">Seguro Vehicular</div>
-        <div class="prod-desc" data-es="Responsabilidad civil, basico o todo riesgo. Cotiza en segundos con tu informacion del vehiculo." data-en="Liability, basic or comprehensive. Get a quote in seconds with your vehicle information.">Responsabilidad civil, basico o todo riesgo. Cotiza en segundos con tu informacion del vehiculo.</div>
-        <span class="prod-link" data-es="Cotizar mi vehiculo &rarr;" data-en="Quote my vehicle &rarr;">Cotizar mi vehiculo &rarr;</span>
+        <span class="pcv2-link" data-es="Ver planes &rarr;" data-en="See plans &rarr;">Ver planes &rarr;</span>
       </div>
-      <div class="prod-card" onclick="showPage('vida')">
-        <div class="prod-card-bar"></div>
-        <div class="prod-icon">
+
+      <div class="prod-card-v2" data-num="02" onclick="showPage('vehiculo')">
+        <div class="pcv2-icon-wrap">
+          <svg viewBox="0 0 144 144" xmlns="http://www.w3.org/2000/svg"><path fill="#4f50ff" d="M140.69,82.92c.03-.09.09-.23.08-.33-.41-3.32-1.13-6.56-2.27-9.79-1.07-3.04-2.62-5.76-4.8-8.14-5.28-5.77-13.11-6.74-19.83-8.6l-5.49-1.52c-1.83-.51-3.46-1.42-4.82-2.78l-4.97-5-7.63-8.24-2.91-2.65c-3.79-3.45-8.36-5.59-13.46-6.3-2.85-.4-5.55-.79-8.33-.74l-.53-.06c-7.1-.18-14.2-.22-21.38.17-3.4.19-6.58.64-9.84,1.4-5.72,1.34-10.48,4.41-14.02,9.09-3.91,5.18-8.13,11.18-10.82,17.04-2.54,5.53-3.45,12.71-3.73,18.82l-.14,3c-.12,2.58-.68,4.93-1.75,7.29-1.48,3.27-1.45,7.05-.03,10.29.24.54.53.96.93,1.2-.02.05-.03.1-.03.14.05.33.37.41.55.59l.53.56c1.27,1.34,3.21,1.93,5.02,2.22l.76.12,3.31.05c.57,0,1.18.09,1.67.15l.14.02c.17.16.38.35.61.36h.13s.77.79.77.79v.13c.09.17.2.33.33.46l.02.11c.05.24.17.46.35.62l.03.12c.3,1.3,3.21,4.76,4.76,6.13,2.88,2.55,6.1,4.22,9.84,5.11,1.99.47,3.56.73,5.68.63,3.87-.18,7.66-1.09,10.87-3.12-.02-.07.06-.1.12-.06.78-.36,1.47-.88,2.09-1.47h.13c2.61-2.17,4.59-4.16,6.1-7.23.01-.03.04-.08.04-.11.5-.77.91-1.57,1.7-2.07.03,0,.08,0,.11-.02l.23-.18s.09,0,.13-.01c.15-.02.3-.08.41-.17l.14-.02,2.47-.11,2.52-.11h5.87s6.13,0,6.13,0h.52s2.98.04,2.98.04l1.81.18.13.03.62.33s.1.01.15,0l.99,1.08c.35.38.51.88.86,1.17,0,.04,0,.12.01.16.1.21.23.4.38.59,4.56,7.54,12.74,11.85,21.7,10.95,4.56-.46,8.63-2.12,12.12-5.11,2.27-1.94,4.16-4.32,5.5-7.01.63-1.25,1.52-2.24,3.07-2.31,2.82-.13,5.58-1,7.71-2.81,4.26-3.64,4.44-9.72,3.65-15.05Z"/></svg>
+        </div>
+        <div class="pcv2-title" data-es="Seguro Vehicular" data-en="Vehicle Insurance">Seguro Vehicular</div>
+        <div class="pcv2-desc" data-es="Responsabilidad civil, basico o todo riesgo. Cotiza en segundos." data-en="Liability or comprehensive. Quote in seconds.">Responsabilidad civil, basico o todo riesgo. Cotiza en segundos.</div>
+        <div class="pcv2-features">
+          <div class="pcv2-feat" data-es="Cotizacion en 60s" data-en="60-second quote">Cotizacion en 60s</div>
+          <div class="pcv2-feat" data-es="Asistencia vial 24/7" data-en="24/7 roadside">Asistencia vial 24/7</div>
+          <div class="pcv2-feat" data-es="Todo riesgo disponible" data-en="Comprehensive available">Todo riesgo disponible</div>
+        </div>
+        <span class="pcv2-link" data-es="Cotizar &rarr;" data-en="Quote &rarr;">Cotizar &rarr;</span>
+      </div>
+
+      <div class="prod-card-v2" data-num="03" onclick="showPage('vida')">
+        <div class="pcv2-icon-wrap">
           <svg viewBox="0 0 144 144" xmlns="http://www.w3.org/2000/svg"><path fill="#4f50ff" d="M106.32,104.25c-.37,4.94-1.49,9.75-3.27,14.44-.97,2.56-2.05,4.97-3.72,7.12-1.32,1.71-2.78,3.22-4.56,4.41-4.78,3.18-10.79,2.88-13.8-2.06-.57-.93-1.15-1.89-1.53-2.93l-.67-1.82c-.46-1.27-.82-2.63-1.63-3.71l-.62-.83c-.26-.35-.55-.52-.84-.76-1.38-1.12-3.39-1.28-4.93-.43-.82.45-1.5,1.05-2.09,1.76-.78.94-1.4,2.01-2.07,3.02l-.78,1.17-.5.68-2.39,3.32c-.12.08-.23.23-.38.39-2.99,3.14-6.22,3.84-10.48,3.05s-7.16-3.85-8.62-7.92c-.99-2.75-1.71-5.52-2.08-8.45s-.59-5.69-.62-8.63c-.04-4.83.19-9.56.7-14.36l.83-7.8c.57-5.33-.37-11.6-3.29-16.03l-.57-1.04c-1.12-1.58-2.27-3.04-3.53-4.54-1.89-2.26-3.71-4.44-5.48-6.82-4.86-6.53-8.03-14.05-9.21-22.11-.29-2-.42-3.88-.26-5.88.28-3.68,3.08-7.1,6.7-7.04,2.95.05,5.43,3.2,6.79,5.77,2.23,4.21,3.56,9.14,5.93,13.75,1.68,3.27,3.74,6.24,6.36,8.71,4.99,4.69,10.94,6.86,17.86,7.16,5.8.25,11.98-1.41,17.01-4.13,7.44-4.04,13.64-10.33,17.39-18.04,1.34-2.75,2.19-5.57,2.82-8.55.86-4.08,2.22-9,5.31-11.72,2.56-2.26,6.16-2.15,8.7.05,1.28,1.11,2.11,2.52,2.58,4.16.61,2.12.78,4.2.57,6.44-.34,3.73-1.22,7.24-2.43,10.79-2.17,6.36-4.79,12.47-8.11,18.31l-4.47,7.84c-1.87,3.28-2.92,6.54-2.28,10.34.3,1.8.9,3.39,1.47,5.13,2.93,8.91,4.89,18.5,4.18,27.82Z"/><path fill="#4f50ff" d="M80.61,43.44c-1.61,3.4-4.45,5.97-8.09,7.17-8.15,2.69-17.78-.97-20.86-9.09-1.06-2.79-1.14-5.77-.49-8.59,2.21-9.64,12.63-14.85,21.68-10.82,4.32,1.92,7.4,5.73,8.64,10.34,1,3.72.78,7.51-.87,10.99Z"/></svg>
         </div>
-        <div class="prod-title" data-es="Seguro de Vida" data-en="Life Insurance">Seguro de Vida</div>
-        <div class="prod-desc" data-es="Protege a tu familia con la cobertura correcta segun tus ingresos y dependientes. Calculadora personalizada." data-en="Protect your family with the right coverage based on your income and dependents.">Protege a tu familia con la cobertura correcta segun tus ingresos y dependientes. Calculadora personalizada.</div>
-        <span class="prod-link" data-es="Calcular mi cobertura &rarr;" data-en="Calculate my coverage &rarr;">Calcular mi cobertura &rarr;</span>
+        <div class="pcv2-title" data-es="Seguro de Vida" data-en="Life Insurance">Seguro de Vida</div>
+        <div class="pcv2-desc" data-es="Protege a tu familia con la cobertura correcta segun tus ingresos." data-en="Protect your family with the right coverage.">Protege a tu familia con la cobertura correcta segun tus ingresos.</div>
+        <div class="pcv2-features">
+          <div class="pcv2-feat" data-es="Calculadora personalizada" data-en="Custom calculator">Calculadora personalizada</div>
+          <div class="pcv2-feat" data-es="Temporal o permanente" data-en="Term or permanent">Temporal o permanente</div>
+          <div class="pcv2-feat" data-es="Comision baja en renovacion" data-en="Low renewal fees">Comision baja en renovacion</div>
+        </div>
+        <span class="pcv2-link" data-es="Calcular &rarr;" data-en="Calculate &rarr;">Calcular &rarr;</span>
+      </div>
+
+      <div class="prod-card-v2" data-num="04" onclick="showPage('maternidad')">
+        <div class="pcv2-icon-wrap"><svg viewBox="0 0 959.51 1854.48" xmlns="http://www.w3.org/2000/svg"><path fill="#4f50ff" d="M818.97,1603.54c-48.88,49.07-77.92,98.13-81.84,170.6-2.1,38.9-32.59,79.98-75.23,80.02l-377.86.32c-40.77.04-74.93-30.01-89.9-66.1-19.84-47.84-23.97-98.49-20.14-149.75,2.09-27.91-4.04-52.1-19.34-74.99l-51.25-76.64-50.79-77.21c-16.7-25.39-31.42-50.95-42.76-78.94-11.72-28.94-13.15-58.64-3.54-88.06,8.43-25.83,19.52-49.2,33.4-72.54l58.27-98.01c53.14-84.68,100.69-170.78,145.41-260.01,12.71-25.36,25.72-48.09,40.53-71.83,16.42-26.32,35.59-48.71,57-70.74,8.95-9.2,15.63-19.33,22.39-29.92,21.99-34.44,31.91-82.26,5.58-112.4-44.33-50.76-74.01-86.06-80.09-158.12-2.3-27.26,1.26-53.84,7.18-80.71,3.66-16.59-.28-30.31-12.69-41.56-35.66-32.35-48.58-71.86-27.14-116.58,16.76-34.94,42.33-62.86,71.15-88.55,17.16-15.3,35.97-26.31,57.33-34.73,43.61-17.21,90.01-2.14,116.96,35.87,8.22,11.58,20.2,17.33,34.32,17.47l54.16.53c54.4,5.53,104.45,28.53,146.41,62.72,35.88,29.23,61.85,72.25,50.82,118.21-4.24,17.65-4.26,34.18-2.56,52.17,8.43,89.49-26.55,231.48-103.11,282.02-15.99,10.56-34.4,14.6-53.64,14.77l-31.59.27c-9.58.08-17.61,6.87-19.14,16.56-10.98,69.95,38.35,114.88,93.36,152.09l72.76,49.23c35.85,24.26,78.55,55.46,86.42,97.69,6.65,35.64-5.97,70.98-31.47,96.03-5.58,5.48-11.11,12.34-8.92,20.6,1.99,7.52,7.87,14.56,14.33,19.49,37.57,28.65,71.24,60.57,97.54,100.26,89.47,135.01,74.01,294.56-34.36,412.29l-48,48.19ZM217.22,1406.22l16.38,30.49c1.15,2.14,3.73,3.45,5.42,3.52,7.42.29,34.33-60.62,44.38-82.5,32.2-70.07,39.56-147.45,19.63-222.08-.92-3.45-4.83-11.4-8.85-9.53-7.35,3.41-14.32,10.57-19.46,17.09l-75.67,96.14c-24.23,30.78-35.66,48.48-17.09,89.32l35.26,77.55ZM777.96,1417.48c43.31-40.84,86.28-96.58,72.26-155.97-7.92-33.54-37.85-59.28-72.02-62.42-39.57-3.64-72.25,19.29-90.34,55.16-24.97-47.31-72.37-68.62-117.69-47.78-21.29,9.79-40.76,30.96-46.28,57.74-10.66,51.72,22.76,102.41,59.33,139.22,29.52,29.71,61.25,55.97,96.04,79.52,6.63,4.49,16.87,1.67,22.39-2.86l76.31-62.6Z"/></svg></div>
+        <div class="pcv2-title" data-es="Maternidad" data-en="Maternity">Maternidad</div>
+        <div class="pcv2-desc" data-es="Calcula el costo real de tu embarazo y encuentra el plan ideal antes de los periodos de espera." data-en="Calculate your real pregnancy cost and find the ideal plan before waiting periods.">Calcula el costo real de tu embarazo y encuentra el plan ideal antes de los periodos de espera.</div>
+        <div class="pcv2-features">
+          <div class="pcv2-feat" data-es="Calculadora de costos" data-en="Cost calculator">Calculadora de costos</div>
+          <div class="pcv2-feat" data-es="Recien nacido cubierto" data-en="Newborn covered">Recien nacido cubierto</div>
+          <div class="pcv2-feat" data-es="Habitacion privada disponible" data-en="Private room available">Habitacion privada disponible</div>
+        </div>
+        <span class="pcv2-link" data-es="Calcular costo &rarr;" data-en="Calculate cost &rarr;">Calcular costo &rarr;</span>
       </div>
     </div>
   </div>
@@ -479,45 +760,176 @@ footer{background:var(--navy2);padding:3.5rem 2.5rem 2rem;}
 <!-- HOW IT WORKS -->
 <section class="section" style="background:var(--cream);">
   <div class="inner">
-    <div class="slabel" data-es="Como funciona" data-en="How it works">Como funciona</div>
-    <h2 class="stitle" data-es="De la duda al plan correcto<br>en tres pasos." data-en="From uncertainty to the right plan<br>in three steps.">De la duda al plan correcto<br>en tres pasos.</h2>
-    <div class="steps-grid">
-      <div class="step"><div class="step-num">1</div><div class="step-title" data-es="Compara o conversa" data-en="Compare or chat">Compara o conversa</div><div class="step-desc" data-es="Usa la tabla comparativa o nuestro asesor de IA para entender que plan se ajusta a tu situacion." data-en="Use the comparison table or our AI advisor to understand which plan fits your situation.">Usa la tabla comparativa o nuestro asesor de IA para entender que plan se ajusta a tu situacion.</div></div>
-      <div class="step"><div class="step-num">2</div><div class="step-title" data-es="Solicita informacion" data-en="Request information">Solicita informacion</div><div class="step-desc" data-es="Con un clic puedes pedir que te llamen, escribirte por WhatsApp o recibir la comparativa por correo." data-en="With one click you can request a call, WhatsApp message or receive the comparison by email.">Con un clic puedes pedir que te llamen, escribirte por WhatsApp o recibir la comparativa por correo.</div></div>
-      <div class="step"><div class="step-num">3</div><div class="step-title" data-es="Un asesor cierra contigo" data-en="An advisor closes with you">Un asesor cierra contigo</div><div class="step-desc" data-es="Nuestros corredores certificados gestionan todo. Tu solo firmas." data-en="Our certified brokers handle everything. You just sign.">Nuestros corredores certificados gestionan todo. Tu solo firmas.</div></div>
+    <div style="text-align:center;max-width:600px;margin:0 auto;">
+      <div class="slabel" data-es="Como funciona" data-en="How it works">Como funciona</div>
+      <h2 class="stitle" data-es="De la duda al plan correcto<br>en tres pasos." data-en="From uncertainty to the right plan<br>in three steps.">De la duda al plan correcto<br>en tres pasos.</h2>
+      <p class="ssub" style="margin:.5rem auto 0;" data-es="Sin reuniones. Sin papeleo. Sin complicaciones." data-en="No meetings. No paperwork. No complications.">Sin reuniones. Sin papeleo. Sin complicaciones.</p>
+    </div>
+    <div class="steps-v2">
+      <div class="step-v2">
+        <div class="step-num-v2">01</div>
+        <div class="step-tag" data-es="2 minutos" data-en="2 minutes">2 minutos</div>
+        <div class="step-title" data-es="Compara o conversa" data-en="Compare or chat">Compara o conversa</div>
+        <div class="step-desc" data-es="Usa la tabla comparativa o nuestro asesor de IA para entender que plan se ajusta a tu situacion." data-en="Use the comparison table or our AI advisor to understand which plan fits.">Usa la tabla comparativa o nuestro asesor de IA para entender que plan se ajusta a tu situacion.</div>
+      </div>
+      <div class="step-v2">
+        <div class="step-num-v2">02</div>
+        <div class="step-tag" data-es="1 click" data-en="1 click">1 click</div>
+        <div class="step-title" data-es="Solicita informacion" data-en="Request information">Solicita informacion</div>
+        <div class="step-desc" data-es="Pide que te llamen, escribe por WhatsApp o recibe la comparativa por correo. Tu eliges." data-en="Request a call, WhatsApp message or comparison by email. You choose.">Pide que te llamen, escribe por WhatsApp o recibe la comparativa por correo. Tu eliges.</div>
+      </div>
+      <div class="step-v2">
+        <div class="step-num-v2">03</div>
+        <div class="step-tag" data-es="Mismo dia" data-en="Same day">Mismo dia</div>
+        <div class="step-title" data-es="Un asesor cierra contigo" data-en="An advisor closes with you">Un asesor cierra contigo</div>
+        <div class="step-desc" data-es="Nuestros corredores certificados gestionan todo el proceso. Tu solo firmas." data-en="Our certified brokers handle everything. You just sign.">Nuestros corredores certificados gestionan todo el proceso. Tu solo firmas.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- SOCIAL PROOF -->
+<section class="social-proof">
+  <div class="inner">
+    <div style="text-align:center;max-width:640px;margin:0 auto;">
+      <div class="slabel" data-es="Lo que dicen" data-en="Testimonials">Lo que dicen</div>
+      <h2 class="stitle" data-es="Clientes que ya<br>encontraron su plan." data-en="Clients who already<br>found their plan.">Clientes que ya<br>encontraron su plan.</h2>
+    </div>
+
+    <div class="testimonial-grid">
+      <div class="testimonial">
+        <div class="tstars">★★★★★</div>
+        <p class="ttext" data-es="Pase semanas tratando de entender mi cobertura. En kubre me explicaron todo en 20 minutos y me ahorraron RD$2,400 al mes con un plan mejor que el que tenia." data-en="I spent weeks trying to understand my coverage. At kubre they explained everything in 20 minutes and saved me RD$2,400/mo with a better plan.">Pase semanas tratando de entender mi cobertura. En kubre me explicaron todo en 20 minutos y me ahorraron RD$2,400 al mes con un plan mejor que el que tenia.</p>
+        <div class="tauthor">
+          <div class="tav">MR</div>
+          <div>
+            <div class="tname">Maria Rodriguez</div>
+            <div class="trole" data-es="Disenadora · Santo Domingo" data-en="Designer · Santo Domingo">Disenadora · Santo Domingo</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial">
+        <div class="tstars">★★★★★</div>
+        <p class="ttext" data-es="Compre mi primera poliza de vida sin entender mucho del tema. El asesor de kubre me hizo preguntas simples y me presento 3 opciones claras. Cero presion para vender." data-en="I bought my first life insurance without understanding much. Kubre's advisor asked simple questions and showed me 3 clear options. Zero sales pressure.">Compre mi primera poliza de vida sin entender mucho del tema. El asesor de kubre me hizo preguntas simples y me presento 3 opciones claras. Cero presion para vender.</p>
+        <div class="tauthor">
+          <div class="tav t2">JC</div>
+          <div>
+            <div class="tname">Jose Castillo</div>
+            <div class="trole" data-es="Ingeniero · Santiago" data-en="Engineer · Santiago">Ingeniero · Santiago</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial">
+        <div class="tstars">★★★★★</div>
+        <p class="ttext" data-es="Use la calculadora de embarazo y termine contratando un plan completo. Lo mejor: me alertaron de los periodos de espera ANTES de gastar. Eso es honestidad." data-en="I used the pregnancy calculator and ended up getting a full plan. The best: they warned me about waiting periods BEFORE I spent. That's honesty.">Use la calculadora de embarazo y termine contratando un plan completo. Lo mejor: me alertaron de los periodos de espera ANTES de gastar. Eso es honestidad.</p>
+        <div class="tauthor">
+          <div class="tav t3">LP</div>
+          <div>
+            <div class="tname">Laura Pena</div>
+            <div class="trole" data-es="Madre · La Romana" data-en="Mother · La Romana">Madre · La Romana</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="trust-strip">
+      <div class="trust-item">
+        <div class="trust-icon">🛡️</div>
+        <span data-es="Certificados por SISDOM" data-en="SISDOM certified">Certificados por SISDOM</span>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">🔒</div>
+        <span data-es="Datos protegidos" data-en="Protected data">Datos protegidos</span>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">✓</div>
+        <span data-es="Multi-aseguradora" data-en="Multi-insurer">Multi-aseguradora</span>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">⭐</div>
+        <span data-es="Sin conflicto de interes" data-en="No conflict of interest">Sin conflicto de interes</span>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- INSURERS -->
-<section class="insurers-section">
-  <div class="inner">
-    <div class="slabel" style="color:rgba(255,255,255,.45);" data-es="Aseguradoras comparadas" data-en="Compared insurers">Aseguradoras comparadas</div>
+<section class="insurers-section-v2">
+  <div class="insurers-header">
+    <div class="slabel" style="color:rgba(255,255,255,.55);" data-es="Aseguradoras comparadas" data-en="Compared insurers">Aseguradoras comparadas</div>
     <h2 class="stitle" style="color:var(--white);" data-es="Comparamos las mejores<br>aseguradoras de RD." data-en="We compare the best<br>insurers in DR.">Comparamos las mejores<br>aseguradoras de RD.</h2>
-    <p class="ssub" style="color:rgba(255,255,255,.5);margin-bottom:0;" data-es="No somos agentes de una sola aseguradora. Trabajamos con todas para encontrar lo que te conviene a ti." data-en="We are not agents for a single insurer. We work with all of them to find what's best for you.">No somos agentes de una sola aseguradora. Trabajamos con todas para encontrar lo que te conviene a ti.</p>
-    <div class="insurers-grid">
-      <div class="ins-card"><div class="ins-name">Atrio<small>Seguros</small></div></div>
-      <div class="ins-card"><div class="ins-name">Seguros<small>Crecer</small></div></div>
-      <div class="ins-card"><div class="ins-name">Dominicana<small>Compania de Seguros</small></div></div>
-      <div class="ins-card"><div class="ins-name">Humano<small>Seguros</small></div></div>
-      <div class="ins-card"><div class="ins-name">La Colonial<small>Seguros</small></div></div>
-      <div class="ins-card"><div class="ins-name">MAPFRE BHD<small>Seguros</small></div></div>
-      <div class="ins-card"><div class="ins-name">La Monumental<small>de Seguros</small></div></div>
-      <div class="ins-card"><div class="ins-name">Seguros<small>Reservas</small></div></div>
-      <div class="ins-card"><div class="ins-name">SAM<small>Latinoamerica</small></div></div>
-      <div class="ins-card"><div class="ins-name">Seguros<small>Ademi</small></div></div>
-      <div class="ins-card"><div class="ins-name">Sura<small>Seguros</small></div></div>
-      <div class="ins-card"><div class="ins-name">UNIT<small>Filial Grupo Universal</small></div></div>
-      <div class="ins-card"><div class="ins-name">Universal<small>Vive tranquilo. Vive seguro.</small></div></div>
+    <p class="ssub" style="color:rgba(255,255,255,.55);margin:1rem auto 0;" data-es="No somos agentes de una sola aseguradora. Trabajamos con todas para encontrar lo que te conviene a ti." data-en="We are not agents for a single insurer. We work with all of them to find what's best for you.">No somos agentes de una sola aseguradora. Trabajamos con todas para encontrar lo que te conviene a ti.</p>
+  </div>
+
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <!-- First set -->
+      <div class="wordmark wm-1">Humano</div>
+      <div class="wordmark wm-2">UNIVERSAL</div>
+      <div class="wordmark wm-3">Mapfre BHD</div>
+      <div class="wordmark wm-4">Sura</div>
+      <div class="wordmark wm-5">Reservas</div>
+      <div class="wordmark wm-6">La Colonial</div>
+      <div class="wordmark wm-7">PALIC</div>
+      <div class="wordmark wm-8">Atrio</div>
+      <div class="wordmark wm-1">Monumental</div>
+      <div class="wordmark wm-2">CRECER</div>
+      <div class="wordmark wm-3">Dominicana</div>
+      <div class="wordmark wm-5">Ademi</div>
+      <div class="wordmark wm-7">UNIT</div>
+      <!-- Duplicate set for seamless loop -->
+      <div class="wordmark wm-1">Humano</div>
+      <div class="wordmark wm-2">UNIVERSAL</div>
+      <div class="wordmark wm-3">Mapfre BHD</div>
+      <div class="wordmark wm-4">Sura</div>
+      <div class="wordmark wm-5">Reservas</div>
+      <div class="wordmark wm-6">La Colonial</div>
+      <div class="wordmark wm-7">PALIC</div>
+      <div class="wordmark wm-8">Atrio</div>
+      <div class="wordmark wm-1">Monumental</div>
+      <div class="wordmark wm-2">CRECER</div>
+      <div class="wordmark wm-3">Dominicana</div>
+      <div class="wordmark wm-5">Ademi</div>
+      <div class="wordmark wm-7">UNIT</div>
     </div>
   </div>
 </section>
 
 <!-- CTA BAND -->
-<div class="cta-band">
-  <h2 data-es="Preguntas sobre tu cobertura?<br>Nosotros tenemos las respuestas." data-en="Questions about your coverage?<br>We have the answers.">Preguntas sobre tu cobertura?<br>Nosotros tenemos las respuestas.</h2>
-  <p data-es="Nuestros asesores certificados te responden sin rodeos, sin jerga, y sin cobrarte nada." data-en="Our certified advisors answer you straight, without jargon, and at no cost.">Nuestros asesores certificados te responden sin rodeos, sin jerga, y sin cobrarte nada.</p>
-  <button class="btn-primary" onclick="openLead('general')" data-es="Hablar con un asesor gratis" data-en="Talk to an advisor for free">Hablar con un asesor gratis</button>
+<div class="cta-band-v2">
+  <div class="cta-content-v2">
+    <div class="cta-eyebrow">
+      <div class="tag-dot"></div>
+      <span data-es="Asesores en linea ahora" data-en="Advisors online now">Asesores en linea ahora</span>
+    </div>
+    <h2 data-es="Preguntas sobre tu cobertura?<br><em>Nosotros tenemos las respuestas.</em>" data-en="Questions about your coverage?<br><em>We have the answers.</em>">Preguntas sobre tu cobertura?<br><em>Nosotros tenemos las respuestas.</em></h2>
+    <p data-es="Nuestros asesores certificados te responden sin rodeos, sin jerga, y sin cobrarte nada. La asesoria es gratis para siempre." data-en="Our certified advisors answer straight, without jargon, at no cost. Advisory is free forever.">Nuestros asesores certificados te responden sin rodeos, sin jerga, y sin cobrarte nada. La asesoria es gratis para siempre.</p>
+    <div class="cta-buttons">
+      <button class="btn-primary" onclick="openLead('general')" data-es="Hablar con un asesor gratis" data-en="Talk to an advisor for free">Hablar con un asesor gratis</button>
+      <button class="btn-ghost" onclick="showPage('ai')" data-es="Probar el asesor IA" data-en="Try AI advisor">Probar el asesor IA</button>
+    </div>
+    <div class="cta-stats-row">
+      <div class="cta-stat">
+        <div class="cta-stat-num">+13</div>
+        <div class="cta-stat-lbl" data-es="Aseguradoras" data-en="Insurers">Aseguradoras</div>
+      </div>
+      <div class="cta-stat">
+        <div class="cta-stat-num">RD$0</div>
+        <div class="cta-stat-lbl" data-es="Asesoria" data-en="Advisory">Asesoria</div>
+      </div>
+      <div class="cta-stat">
+        <div class="cta-stat-num">&lt;1hr</div>
+        <div class="cta-stat-lbl" data-es="Respuesta" data-en="Response">Respuesta</div>
+      </div>
+      <div class="cta-stat">
+        <div class="cta-stat-num">100%</div>
+        <div class="cta-stat-lbl" data-es="Digital" data-en="Digital">Digital</div>
+      </div>
+    </div>
+  </div>
 </div>
 
 </div><!-- end page-home -->
@@ -667,44 +1079,892 @@ footer{background:var(--navy2);padding:3.5rem 2.5rem 2rem;}
 
 <!-- ═══════════════ MATERNIDAD PAGE ═══════════════ -->
 <div id="page-maternidad" style="display:none;">
-<section class="section" style="padding-top:3rem;">
-  <div class="inner">
-    <div class="slabel" data-es="Seguro de maternidad" data-en="Maternity insurance">Seguro de maternidad</div>
-    <h2 class="stitle" data-es="Cubiertos desde el primer dia" data-en="Covered from day one">Cubiertos desde el primer dia</h2>
-    <p class="ssub" style="margin-bottom:2rem;" data-es="Control prenatal, parto, cesarea y recien nacido. Planes disenados para proteger a mama y bebe." data-en="Prenatal care, delivery, C-section and newborn. Plans designed to protect mom and baby.">Control prenatal, parto, cesarea y recien nacido. Planes disenados para proteger a mama y bebe.</p>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;">
-      <div class="prod-card">
-        <div class="prod-card-bar"></div>
-        <div style="font-size:40px;margin-bottom:1rem;">&#128118;</div>
-        <div class="prod-title" data-es="Plan Prenatal" data-en="Prenatal Plan">Plan Prenatal</div>
-        <div class="prod-desc" data-es="Consultas prenatales, ultrasonidos, examenes de laboratorio y vitaminas durante el embarazo." data-en="Prenatal consultations, ultrasounds, lab tests and vitamins during pregnancy.">Consultas prenatales, ultrasonidos, examenes de laboratorio y vitaminas durante el embarazo.</div>
-        <button class="btn-cta" onclick="openLead('maternidad')" data-es="Solicitar informacion" data-en="Request information">Solicitar informacion</button>
-      </div>
-      <div class="prod-card">
-        <div class="prod-card-bar"></div>
-        <div style="font-size:40px;margin-bottom:1rem;">&#127973;</div>
-        <div class="prod-title" data-es="Plan Parto" data-en="Delivery Plan">Plan Parto</div>
-        <div class="prod-desc" data-es="Hospitalizacion, parto natural o cesarea, anestesia y cuidados postparto incluidos." data-en="Hospitalization, natural birth or C-section, anesthesia and postpartum care included.">Hospitalizacion, parto natural o cesarea, anestesia y cuidados postparto incluidos.</div>
-        <button class="btn-cta" onclick="openLead('maternidad')" data-es="Solicitar informacion" data-en="Request information">Solicitar informacion</button>
-      </div>
-      <div class="prod-card">
-        <div class="prod-card-bar"></div>
-        <div style="font-size:40px;margin-bottom:1rem;">&#128118;&#127995;</div>
-        <div class="prod-title" data-es="Plan Recien Nacido" data-en="Newborn Plan">Plan Recien Nacido</div>
-        <div class="prod-desc" data-es="Cobertura del bebe desde el nacimiento. Vacunas, pediatria, neonatologia si es necesario." data-en="Coverage for the baby from birth. Vaccines, pediatrics, neonatology if needed.">Cobertura del bebe desde el nacimiento. Vacunas, pediatria, neonatologia si es necesario.</div>
-        <button class="btn-cta" onclick="openLead('maternidad')" data-es="Solicitar informacion" data-en="Request information">Solicitar informacion</button>
-      </div>
-    </div>
-    <div style="margin-top:2rem;background:var(--blue-lt);border-radius:16px;padding:2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;">
-      <div>
-        <div style="font-weight:700;font-size:18px;color:var(--navy);" data-es="Habla con una asesora especializada en maternidad" data-en="Talk to a maternity specialist advisor">Habla con una asesora especializada en maternidad</div>
-        <div style="font-size:14px;color:var(--muted);margin-top:4px;" data-es="Te explicamos las opciones segun tu semana de embarazo y presupuesto" data-en="We explain the options based on your week of pregnancy and budget">Te explicamos las opciones segun tu semana de embarazo y presupuesto</div>
-      </div>
-      <button class="btn-primary" onclick="openLead('maternidad')" data-es="Agendar consulta" data-en="Schedule consultation">Agendar consulta</button>
+
+<!-- CALC STYLES scoped -->
+<style>
+/* ── CALCULATOR SCOPED STYLES ── */
+#calc-wrap {
+  font-family: 'Epilogue', sans-serif;
+  background: #F5F3EE;
+  min-height: 80vh;
+  color: #0D1B3E;
+}
+#calc-wrap .c-progress-wrap {
+  width: 100%; height: 3px; background: #E5E1D8;
+  border-radius: 3px; overflow: hidden; margin-bottom: 0;
+}
+#calc-wrap .c-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #4F50FF, #7B7CFF);
+  transition: width .6s cubic-bezier(.4,0,.2,1);
+}
+#calc-wrap .c-step-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 24px 0; max-width: 560px; margin: 0 auto;
+  min-height: 44px;
+}
+#calc-wrap .c-back-btn {
+  background: none; border: none;
+  font-family: 'Epilogue', sans-serif;
+  font-size: 13px; font-weight: 500;
+  color: #6B7280; cursor: pointer;
+  padding: 4px 0; transition: color .2s;
+}
+#calc-wrap .c-back-btn:hover { color: #0D1B3E; }
+#calc-wrap .c-step-counter {
+  font-size: 13px; color: #9CA3AF; font-weight: 500;
+}
+#calc-wrap .c-container {
+  max-width: 560px; margin: 0 auto;
+  padding: 24px 24px 16px;
+}
+#calc-wrap .c-step { display: none; animation: cStepIn .4s cubic-bezier(.4,0,.2,1) both; }
+#calc-wrap .c-step.active { display: flex; flex-direction: column; gap: 28px; }
+@keyframes cStepIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+#calc-wrap .c-q-label {
+  font-size: 12px; font-weight: 600; color: #4F50FF;
+  text-transform: uppercase; letter-spacing: .1em;
+}
+#calc-wrap .c-q-title {
+  font-size: clamp(24px, 5vw, 34px); font-weight: 700;
+  color: #0D1B3E; line-height: 1.15; margin-top: 6px;
+}
+#calc-wrap .c-q-sub {
+  font-size: 15px; color: #4B5563; line-height: 1.6; margin-top: 6px;
+}
+/* Options */
+#calc-wrap .c-options { display: flex; flex-direction: column; gap: 10px; }
+#calc-wrap .c-option {
+  background: #FFFFFF; border: 1.5px solid #E5E1D8;
+  border-radius: 16px; padding: 16px 18px;
+  display: flex; align-items: center; gap: 14px;
+  cursor: pointer; transition: all .2s; user-select: none;
+}
+#calc-wrap .c-option:hover { border-color: #4F50FF; box-shadow: 0 0 0 3px rgba(79,80,255,.07); }
+#calc-wrap .c-option.selected {
+  border-color: #4F50FF; background: rgba(79,80,255,.03);
+  box-shadow: 0 0 0 3px rgba(79,80,255,.1);
+}
+#calc-wrap .c-opt-icon {
+  width: 42px; height: 42px; border-radius: 11px;
+  background: #EDEAE3; display: flex; align-items: center;
+  justify-content: center; font-size: 20px; flex-shrink: 0; transition: all .2s;
+}
+#calc-wrap .c-option.selected .c-opt-icon { background: rgba(79,80,255,.1); }
+#calc-wrap .c-opt-title { font-size: 15px; font-weight: 500; color: #0D1B3E; }
+#calc-wrap .c-opt-sub { font-size: 13px; color: #9CA3AF; margin-top: 2px; }
+#calc-wrap .c-opt-check {
+  width: 20px; height: 20px; border-radius: 50%;
+  border: 1.5px solid #E5E1D8; display: flex; align-items: center;
+  justify-content: center; flex-shrink: 0; transition: all .2s; font-size: 11px; color: transparent;
+}
+#calc-wrap .c-option.selected .c-opt-check {
+  background: #4F50FF; border-color: #4F50FF; color: white;
+}
+/* Grid options */
+#calc-wrap .c-options-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+#calc-wrap .c-grid-card {
+  background: #FFFFFF; border: 1.5px solid #E5E1D8;
+  border-radius: 16px; padding: 18px 14px;
+  cursor: pointer; transition: all .2s; text-align: center;
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+  user-select: none;
+}
+#calc-wrap .c-grid-card:hover { border-color: #4F50FF; transform: translateY(-2px); box-shadow: 0 4px 16px rgba(13,27,62,.08); }
+#calc-wrap .c-grid-card.selected {
+  border-color: #4F50FF; background: rgba(79,80,255,.03);
+  box-shadow: 0 0 0 3px rgba(79,80,255,.1); transform: translateY(-2px);
+}
+#calc-wrap .c-grid-icon { font-size: 28px; }
+#calc-wrap .c-grid-title { font-size: 14px; font-weight: 600; color: #0D1B3E; }
+#calc-wrap .c-grid-sub { font-size: 12px; color: #9CA3AF; line-height: 1.4; }
+/* Fields */
+#calc-wrap .c-field { display: flex; flex-direction: column; gap: 6px; }
+#calc-wrap .c-label {
+  font-size: 11px; font-weight: 700; color: #6B7280;
+  text-transform: uppercase; letter-spacing: .07em;
+}
+#calc-wrap .c-input {
+  width: 100%; border: 1.5px solid #E5E1D8; border-radius: 10px;
+  padding: 12px 14px; font-family: 'Epilogue', sans-serif;
+  font-size: 14px; color: #0D1B3E; background: #FFFFFF; outline: none;
+  transition: border-color .2s;
+}
+#calc-wrap .c-input:focus { border-color: #4F50FF; box-shadow: 0 0 0 3px rgba(79,80,255,.08); }
+/* Checkbox */
+#calc-wrap .c-checkbox-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+#calc-wrap .c-check-item {
+  background: #FFFFFF; border: 1.5px solid #E5E1D8; border-radius: 10px;
+  padding: 11px 13px; cursor: pointer; transition: all .2s;
+  display: flex; align-items: center; gap: 9px; user-select: none;
+}
+#calc-wrap .c-check-item:hover { border-color: #4F50FF; }
+#calc-wrap .c-check-item.checked { border-color: #4F50FF; background: rgba(79,80,255,.03); }
+#calc-wrap .c-check-box {
+  width: 17px; height: 17px; border-radius: 5px; flex-shrink: 0;
+  border: 1.5px solid #E5E1D8; display: flex; align-items: center;
+  justify-content: center; transition: all .2s; font-size: 10px; color: transparent;
+}
+#calc-wrap .c-check-item.checked .c-check-box {
+  background: #4F50FF; border-color: #4F50FF; color: white;
+}
+#calc-wrap .c-check-label { font-size: 13px; font-weight: 500; color: #0D1B3E; line-height: 1.3; }
+/* Slider */
+#calc-wrap .c-slider {
+  -webkit-appearance: none; width: 100%; height: 5px;
+  border-radius: 4px; background: #E5E1D8; outline: none; cursor: pointer;
+}
+#calc-wrap .c-slider::-webkit-slider-thumb {
+  -webkit-appearance: none; width: 22px; height: 22px; border-radius: 50%;
+  background: #4F50FF; cursor: pointer;
+  box-shadow: 0 0 0 4px rgba(79,80,255,.12); transition: box-shadow .2s;
+}
+#calc-wrap .c-slider::-webkit-slider-thumb:hover { box-shadow: 0 0 0 7px rgba(79,80,255,.18); }
+/* Warning */
+#calc-wrap .c-warning {
+  background: #FFF7ED; border: 1px solid #FED7AA; border-radius: 10px;
+  padding: 12px 14px; display: flex; gap: 10px; align-items: flex-start;
+  font-size: 13px; color: #92400E; line-height: 1.5;
+}
+/* Cond panel */
+#calc-wrap .c-cond-panel {
+  background: #EDEAE3; border-radius: 10px; padding: 14px;
+  display: none; flex-direction: column; gap: 10px; border: 1px solid #E5E1D8;
+}
+#calc-wrap .c-cond-panel.visible { display: flex; animation: cStepIn .3s ease both; }
+/* Coverage options */
+#calc-wrap .c-coverage-grid { display: flex; flex-direction: column; gap: 10px; }
+#calc-wrap .c-price-range-wrap {
+  background: #FFFFFF; border: 1.5px solid #E5E1D8;
+  border-radius: 16px; padding: 20px 18px; display: none;
+}
+/* Footer */
+
+#calc-wrap .c-btn {
+  background: linear-gradient(135deg, #4F50FF, #7B7CFF);
+  color: white; border: none; padding: 15px 32px; border-radius: 50px;
+  font-family: 'Epilogue', sans-serif; font-weight: 700; font-size: 15px;
+  cursor: pointer; transition: all .25s; width: 100%; max-width: 340px;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+}
+#calc-wrap .c-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(79,80,255,.4);
+}
+/* Loading */
+#calc-wrap .c-loading {
+  display: none; position: fixed; inset: 0;
+  background: #F5F3EE; z-index: 200;
+  flex-direction: column; align-items: center; justify-content: center; gap: 24px;
+}
+#calc-wrap .c-loading.visible { display: flex; }
+#calc-wrap .c-spinner {
+  width: 44px; height: 44px; border-radius: 50%;
+  border: 3px solid #E5E1D8; border-top-color: #4F50FF;
+  animation: cSpin 1s linear infinite;
+}
+@keyframes cSpin { to { transform: rotate(360deg); } }
+/* Results */
+#calc-wrap .c-results {
+  display: none; padding: 24px 24px 80px;
+  max-width: 560px; margin: 0 auto; flex-direction: column; gap: 22px;
+}
+#calc-wrap .c-results.visible { display: flex; }
+#calc-wrap .c-result-hero {
+  background: linear-gradient(135deg, #0D1B3E, #162D50);
+  border-radius: 18px; padding: 20px 22px; color: white; text-align: center;
+  box-shadow: 0 8px 32px rgba(13,27,62,.18);
+}
+#calc-wrap .c-result-label {
+  font-size: 11px; font-weight: 600; color: rgba(255,255,255,.5);
+  text-transform: uppercase; letter-spacing: .1em; margin-bottom: 8px;
+}
+#calc-wrap .c-result-range {
+  font-size: clamp(20px, 5vw, 28px); font-weight: 700; color: white;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  margin-bottom: 6px;
+}
+#calc-wrap .c-result-range .cn { color: #a5b4ff; }
+#calc-wrap .c-result-sub {
+  font-size: 12px; color: rgba(255,255,255,.5); line-height: 1.5;
+}
+#calc-wrap .c-breakdown { display: flex; flex-direction: column; gap: 8px; }
+#calc-wrap .c-bcard {
+  background: #FFFFFF; border: 1px solid #E5E1D8; border-radius: 10px;
+  padding: 13px 16px; display: flex; align-items: center;
+  justify-content: space-between; animation: cStepIn .4s ease both;
+}
+#calc-wrap .c-bcard:hover { background: #F5F3EE; }
+#calc-wrap .c-bleft { display: flex; align-items: center; gap: 10px; }
+#calc-wrap .c-bname { font-size: 13px; font-weight: 500; color: #0D1B3E; }
+#calc-wrap .c-bsub { font-size: 11px; color: #9CA3AF; }
+#calc-wrap .c-bbar { height: 3px; background: #EDEAE3; border-radius: 3px; margin-top: 5px; width: 100px; overflow: hidden; }
+#calc-wrap .c-bbar-fill { height: 100%; border-radius: 3px; background: linear-gradient(90deg,#4F50FF,#7B7CFF); transition: width 1s ease; }
+#calc-wrap .c-bamount { font-size: 14px; font-weight: 600; color: #0D1B3E; text-align: right; }
+#calc-wrap .c-comp-card {
+  background: #FFFFFF; border: 1px solid #E5E1D8; border-radius: 18px; padding: 20px;
+}
+#calc-wrap .c-comp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+#calc-wrap .c-comp-wo {
+  background: #FFF1F1; border: 1px solid #FECACA; border-radius: 10px;
+  padding: 14px; text-align: center;
+}
+#calc-wrap .c-comp-wi {
+  background: #F0FDF4; border: 1px solid #BBF7D0; border-radius: 10px;
+  padding: 14px; text-align: center;
+}
+#calc-wrap .c-comp-lbl { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; margin-bottom: 6px; }
+#calc-wrap .c-comp-wo .c-comp-lbl { color: #DC2626; }
+#calc-wrap .c-comp-wi .c-comp-lbl { color: #16A34A; }
+#calc-wrap .c-comp-amt { font-size: 20px; font-weight: 700; }
+#calc-wrap .c-comp-wo .c-comp-amt { color: #DC2626; }
+#calc-wrap .c-comp-wi .c-comp-amt { color: #16A34A; }
+#calc-wrap .c-savings {
+  background: linear-gradient(135deg,#F0FDF4,#DCFCE7);
+  border: 1px solid #BBF7D0; border-radius: 10px;
+  padding: 12px; margin-top: 10px; text-align: center;
+  font-size: 13px; font-weight: 600; color: #15803D;
+}
+#calc-wrap .c-disc {
+  margin-top:10px; padding:12px 14px; background:#F5F3EE;
+  border-radius:10px; border:1px solid #E5E1D8;
+}
+#calc-wrap .c-risk-cards { display: flex; flex-direction: column; gap: 8px; }
+#calc-wrap .c-risk {
+  background: #FFFFFF; border: 1px solid #E5E1D8; border-radius: 10px;
+  padding: 12px 14px; display: flex; gap: 10px; align-items: flex-start;
+}
+#calc-wrap .c-risk.high { border-color: #FECACA; background: #FFF5F5; }
+#calc-wrap .c-risk.med { border-color: #FED7AA; background: #FFFBF0; }
+#calc-wrap .c-risk-text { font-size: 13px; color: #0D1B3E; line-height: 1.5; }
+#calc-wrap .c-risk-text strong { display: block; font-weight: 600; margin-bottom: 2px; }
+#calc-wrap .c-score-row {
+  background: #FFFFFF; border: 1px solid #E5E1D8; border-radius: 14px;
+  padding: 16px 18px; display: flex; align-items: center; gap: 14px;
+}
+#calc-wrap .c-cta-block {
+  background: linear-gradient(135deg,#0D1B3E,#162D50);
+  border-radius: 22px; padding: 28px 24px; text-align: center;
+  position: relative; overflow: hidden;
+}
+#calc-wrap .c-section-hdr {
+  display: flex; align-items: center; gap: 10px; margin-bottom: 8px;
+}
+#calc-wrap .c-section-hdr h4 {
+  font-size: 15px; font-weight: 600; color: #0D1B3E; white-space: nowrap;
+}
+#calc-wrap .c-section-line { flex: 1; height: 1px; background: #E5E1D8; }
+@media(max-width:480px) {
+  #calc-wrap .c-checkbox-grid { grid-template-columns: 1fr; }
+  #calc-wrap .c-options-grid { grid-template-columns: 1fr 1fr; }
+}
+</style>
+
+<!-- CALCULATOR EMBED -->
+<div id="calc-wrap">
+
+  <!-- Progress -->
+  <div class="c-progress-wrap">
+    <div class="c-progress-fill" id="c-progress-fill" style="width:0%"></div>
+  </div>
+
+  <!-- Step header -->
+  <div class="c-step-header">
+    <button class="c-back-btn" id="c-back-btn" onclick="cPrevStep()" style="visibility:hidden;">← Atrás</button>
+    <div class="c-step-counter" id="c-step-counter"></div>
+  </div>
+
+  <!-- Loading -->
+  <div class="c-loading" id="c-loading">
+    <div class="c-spinner"></div>
+    <div style="text-align:center;">
+      <div id="c-loading-msg" style="font-size:15px;color:#4B5563;transition:opacity .3s;">Analizando costos hospitalarios…</div>
+      <div style="font-size:12px;color:#9CA3AF;margin-top:4px;">Esto toma solo un momento</div>
     </div>
   </div>
-</section>
-</div>
+
+  <!-- Quiz container -->
+  <div class="c-container" id="c-quiz">
+
+    <!-- STEP 1 -->
+    <div class="c-step" id="c-step-1">
+      <div>
+        <div class="c-q-label">Paso 1 de 6</div>
+        <div class="c-q-title">¿Dónde planeas dar a luz?</div>
+        <div class="c-q-sub">Esto nos ayuda a estimar costos hospitalarios reales de tu área.</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px;">
+        <div class="c-field">
+          <div class="c-label">País</div>
+          <select class="c-input" id="c-country">
+            <option value="rd">República Dominicana</option>
+            <option value="us">Estados Unidos</option>
+            <option value="pr">Puerto Rico</option>
+            <option value="other">Otro</option>
+          </select>
+        </div>
+        <div class="c-field">
+          <div class="c-label">Ciudad</div>
+          <select class="c-input" id="c-city">
+            <option value="">Selecciona tu ciudad</option>
+            <option value="sd">Santo Domingo</option>
+            <option value="stgo">Santiago</option>
+            <option value="pc">Punta Cana</option>
+            <option value="lr">La Romana</option>
+            <option value="pp">Puerto Plata</option>
+            <option value="other">Otra ciudad</option>
+          </select>
+        </div>
+        <div class="c-field" style="position:relative;">
+          <div class="c-label">Hospital preferido <span style="color:#9CA3AF;font-weight:400;">(opcional)</span></div>
+          <div style="position:relative;">
+            <input type="text" class="c-input" id="c-hospital"
+              placeholder="Ej. Centro Médico UCE, HOMS…" autocomplete="off"
+              oninput="cFilterHospitals(this.value)"
+              onfocus="cShowHospitalDD()"
+              onblur="setTimeout(cHideHospitalDD,150)"
+              style="padding-right:36px;">
+            <button id="c-hospital-clear" onclick="cClearHospital()"
+              style="display:none;position:absolute;right:10px;top:50%;transform:translateY(-50%);background:#EDEAE3;border:none;width:20px;height:20px;border-radius:50%;cursor:pointer;font-size:11px;color:#6B7280;display:none;align-items:center;justify-content:center;">✕</button>
+          </div>
+          <div id="c-hospital-dd" style="display:none;position:absolute;top:calc(100% + 2px);left:0;right:0;background:#FFFFFF;border:1.5px solid #E5E1D8;border-radius:12px;box-shadow:0 8px 24px rgba(13,27,62,.1);z-index:100;overflow:hidden;">
+            <div id="c-hospital-list"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 2 -->
+    <div class="c-step" id="c-step-2">
+      <div>
+        <div class="c-q-label">Paso 2 de 6</div>
+        <div class="c-q-title">¿Cuál es tu situación actual?</div>
+        <div class="c-q-sub">Esto afecta los períodos de espera y cobertura disponible.</div>
+      </div>
+      <div class="c-options" id="c-preg-opts">
+        <div class="c-option" onclick="cSelect(this,'c-preg-opts','pregStatus','none')">
+          <div class="c-opt-icon">🌱</div>
+          <div style="flex:1;"><div class="c-opt-title">Aún no estoy embarazada</div><div class="c-opt-sub">Planificando para el futuro</div></div>
+          <div class="c-opt-check">✓</div>
+        </div>
+        <div class="c-option" onclick="cSelect(this,'c-preg-opts','pregStatus','t1')">
+          <div class="c-opt-icon">🤰</div>
+          <div style="flex:1;"><div class="c-opt-title">Menos de 12 semanas</div><div class="c-opt-sub">Primer trimestre</div></div>
+          <div class="c-opt-check">✓</div>
+        </div>
+        <div class="c-option" onclick="cSelect(this,'c-preg-opts','pregStatus','t2')">
+          <div class="c-opt-icon">💫</div>
+          <div style="flex:1;"><div class="c-opt-title">Segundo trimestre</div><div class="c-opt-sub">Semanas 13 a 26</div></div>
+          <div class="c-opt-check">✓</div>
+        </div>
+        <div class="c-option" onclick="cSelect(this,'c-preg-opts','pregStatus','t3')">
+          <div class="c-opt-icon">✨</div>
+          <div style="flex:1;"><div class="c-opt-title">Tercer trimestre</div><div class="c-opt-sub">Semanas 27 en adelante</div></div>
+          <div class="c-opt-check">✓</div>
+        </div>
+      </div>
+      <div class="c-warning" id="c-preg-warn" style="display:none;">
+        <span style="font-size:16px;">⚠️</span>
+        <div>Ya embarazada, muchos planes tienen <strong>períodos de espera de hasta 10 meses</strong> para maternidad.</div>
+      </div>
+    </div>
+
+    <!-- STEP 3 -->
+    <div class="c-step" id="c-step-3">
+      <div>
+        <div class="c-q-label">Paso 3 de 6</div>
+        <div class="c-q-title">¿Qué tipo de parto prefieres?</div>
+        <div class="c-q-sub">El tipo de parto afecta significativamente los costos finales.</div>
+      </div>
+      <div class="c-options-grid" id="c-delivery-opts">
+        <div class="c-grid-card" onclick="cSelectGrid(this,'c-delivery-opts','deliveryType','natural')">
+          <div class="c-grid-icon">🌿</div>
+          <div class="c-grid-title">Parto natural</div>
+          <div class="c-grid-sub">Menor costo, recuperación más rápida</div>
+          <div style="font-size:12px;color:#4F50FF;font-weight:600;margin-top:4px;">RD$45K–120K</div>
+        </div>
+        <div class="c-grid-card" onclick="cSelectGrid(this,'c-delivery-opts','deliveryType','cesarea')">
+          <div class="c-grid-icon">🏥</div>
+          <div class="c-grid-title">Cesárea</div>
+          <div class="c-grid-sub">Mayor costo, programable</div>
+          <div style="font-size:12px;color:#4F50FF;font-weight:600;margin-top:4px;">RD$70K–250K</div>
+        </div>
+        <div class="c-grid-card" style="grid-column:1/-1;" onclick="cSelectGrid(this,'c-delivery-opts','deliveryType','unsure')">
+          <div class="c-grid-icon">🤷‍♀️</div>
+          <div class="c-grid-title">No estoy segura</div>
+          <div class="c-grid-sub">Usaremos el promedio para tu estimado</div>
+        </div>
+      </div>
+      <div class="c-warning" id="c-cesarea-warn" style="display:none;">
+        <span style="font-size:16px;">💡</span>
+        <div>Las cesáreas pueden aumentar el costo total <strong>hasta un 80% más</strong> que un parto natural.</div>
+      </div>
+    </div>
+
+    <!-- STEP 4 -->
+    <div class="c-step" id="c-step-4">
+      <div>
+        <div class="c-q-label">Paso 4 de 6</div>
+        <div class="c-q-title">¿Tienes seguro actualmente?</div>
+        <div class="c-q-sub">Tu cobertura actual cambia el análisis de lo que necesitas.</div>
+      </div>
+      <div class="c-options" id="c-ins-opts">
+        <div class="c-option" onclick="cSelect(this,'c-ins-opts','insuranceStatus','yes');cShowInsFields(true)">
+          <div class="c-opt-icon">✅</div>
+          <div style="flex:1;"><div class="c-opt-title">Sí, tengo seguro</div><div class="c-opt-sub">Quiero saber si mi cobertura es suficiente</div></div>
+          <div class="c-opt-check">✓</div>
+        </div>
+        <div class="c-option" onclick="cSelect(this,'c-ins-opts','insuranceStatus','no');cShowInsFields(false)">
+          <div class="c-opt-icon">❌</div>
+          <div style="flex:1;"><div class="c-opt-title">No tengo seguro</div><div class="c-opt-sub">Quiero ver mis opciones</div></div>
+          <div class="c-opt-check">✓</div>
+        </div>
+        <div class="c-option" onclick="cSelect(this,'c-ins-opts','insuranceStatus','looking');cShowInsFields(false)">
+          <div class="c-opt-icon">🔍</div>
+          <div style="flex:1;"><div class="c-opt-title">Estoy buscando opciones</div><div class="c-opt-sub">Comparando planes disponibles</div></div>
+          <div class="c-opt-check">✓</div>
+        </div>
+      </div>
+      <div class="c-cond-panel" id="c-ins-fields">
+        <div class="c-field">
+          <div class="c-label">Aseguradora actual</div>
+          <select class="c-input" id="c-insurer">
+            <option value="">Selecciona tu aseguradora</option>
+            <option>Humano</option><option>Universal</option><option>SeNaSa</option>
+            <option>La Monumental</option><option>Palic</option><option>Mapfre BHD</option>
+            <option>BMI</option><option>BUPA</option><option>Reservas</option><option>Sura</option>
+          </select>
+        </div>
+        <div class="c-field">
+          <div class="c-label">Tipo de plan</div>
+          <select class="c-input" id="c-plan-type">
+            <option value="">Tipo de plan</option>
+            <option value="basic">Básico</option><option value="complete">Completo</option>
+            <option value="premium">Premium</option><option value="colectivo">Colectivo / Empleador</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 5 -->
+    <div class="c-step" id="c-step-5">
+      <div>
+        <div class="c-q-label">Paso 5 de 6</div>
+        <div class="c-q-title">¿Qué es importante para ti?</div>
+        <div class="c-q-sub">Selecciona todo lo que aplique.</div>
+      </div>
+      <div class="c-checkbox-grid">
+        <div class="c-check-item" onclick="cToggleCheck(this,'extras','private-room')"><div class="c-check-box">✓</div><div class="c-check-label">🛏️ Habitación privada</div></div>
+        <div class="c-check-item" onclick="cToggleCheck(this,'extras','international')"><div class="c-check-box">✓</div><div class="c-check-label">🌎 Cobertura internacional</div></div>
+        <div class="c-check-item" onclick="cToggleCheck(this,'extras','pediatra')"><div class="c-check-box">✓</div><div class="c-check-label">👶 Pediatra incluido</div></div>
+        <div class="c-check-item" onclick="cToggleCheck(this,'extras','epidural')"><div class="c-check-box">✓</div><div class="c-check-label">💉 Epidural</div></div>
+        <div class="c-check-item" onclick="cToggleCheck(this,'extras','nicu')"><div class="c-check-box">✓</div><div class="c-check-label">🏥 NICU / Incubadora</div></div>
+        <div class="c-check-item" onclick="cToggleCheck(this,'extras','doctor')"><div class="c-check-box">✓</div><div class="c-check-label">👨‍⚕️ Doctor específico</div></div>
+        <div class="c-check-item" onclick="cToggleCheck(this,'extras','twins')"><div class="c-check-box">✓</div><div class="c-check-label">👫 Gemelos</div></div>
+        <div class="c-check-item" onclick="cToggleCheck(this,'extras','fertility')"><div class="c-check-box">✓</div><div class="c-check-label">🌸 Fertilidad</div></div>
+        <div class="c-check-item" onclick="cToggleCheck(this,'extras','newborn')"><div class="c-check-box">✓</div><div class="c-check-label">🍼 Recién nacido cubierto</div></div>
+      </div>
+    </div>
+
+    <!-- STEP 6 -->
+    <div class="c-step" id="c-step-6">
+      <div>
+        <div class="c-q-label">Paso 6 de 6</div>
+        <div class="c-q-title">¿Cuánto quisieras pagar por tu seguro de maternidad?</div>
+        <div class="c-q-sub">Elige el nivel de cobertura y ajusta el rango de precio que te resulta cómodo.</div>
+      </div>
+      <div class="c-coverage-grid" id="c-coverage-opts">
+        <div class="c-option" data-val="basic" onclick="cSelectCoverage(this)">
+          <div class="c-opt-icon">🌱</div>
+          <div style="flex:1;"><div class="c-opt-title">Cobertura básica</div><div class="c-opt-sub">Parto, hospitalización esencial, consultas limitadas</div></div>
+          <div style="text-align:right;flex-shrink:0;"><div style="font-size:12px;font-weight:700;color:#4F50FF;">RD$3,000–5,500</div><div style="font-size:11px;color:#9CA3AF;">/mes</div></div>
+        </div>
+        <div class="c-option" data-val="complete" onclick="cSelectCoverage(this)">
+          <div class="c-opt-icon">⭐</div>
+          <div style="flex:1;"><div class="c-opt-title">Cobertura completa</div><div class="c-opt-sub">Consultas, laboratorios, epidural y recién nacido</div></div>
+          <div style="text-align:right;flex-shrink:0;"><div style="font-size:12px;font-weight:700;color:#4F50FF;">RD$5,500–12,000</div><div style="font-size:11px;color:#9CA3AF;">/mes</div></div>
+        </div>
+        <div class="c-option" data-val="premium" onclick="cSelectCoverage(this)">
+          <div class="c-opt-icon">💎</div>
+          <div style="flex:1;"><div class="c-opt-title">Cobertura premium</div><div class="c-opt-sub">NICU, habitación privada, médico específico</div></div>
+          <div style="text-align:right;flex-shrink:0;"><div style="font-size:12px;font-weight:700;color:#4F50FF;">RD$12,000–35,000</div><div style="font-size:11px;color:#9CA3AF;">/mes</div></div>
+        </div>
+      </div>
+      <div class="c-price-range-wrap" id="c-price-range">
+        <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:16px;">
+          <div>
+            <div style="font-size:11px;font-weight:700;color:#9CA3AF;text-transform:uppercase;letter-spacing:.08em;margin-bottom:3px;">Tu rango ajustado</div>
+            <div style="font-size:26px;font-weight:700;color:#0D1B3E;">
+              RD$<span id="c-range-min">0</span>
+              <span style="font-size:14px;color:#9CA3AF;font-weight:400;"> – </span>
+              RD$<span id="c-range-max">0</span>
+              <span style="font-size:12px;color:#9CA3AF;font-weight:400;">/mes</span>
+            </div>
+          </div>
+          <div style="font-size:20px;" id="c-range-emoji">⭐</div>
+        </div>
+        <div style="position:relative;padding-bottom:6px;">
+          <div style="display:flex;justify-content:space-between;font-size:11px;color:#9CA3AF;margin-bottom:8px;">
+            <span>Precio más bajo</span><span>Precio más alto</span>
+          </div>
+          <input type="range" class="c-slider" id="c-budget-slider" min="0" max="100" step="1" value="50" oninput="cUpdateSlider(this.value)">
+          <div id="c-slider-tip" style="position:absolute;top:-26px;background:#4F50FF;color:white;font-size:11px;font-weight:600;padding:3px 8px;border-radius:6px;pointer-events:none;transform:translateX(-50%);white-space:nowrap;left:50%;transition:left .1s;">RD$0/mes</div>
+        </div>
+        <div id="c-budget-hint" style="margin-top:12px;background:#EDEAE3;border-radius:8px;padding:10px 12px;font-size:13px;color:#4B5563;line-height:1.5;"></div>
+      </div>
+    </div>
+
+    <!-- Nav button — lives inside scroll flow -->
+    <div id="c-nav-btn-wrap" style="padding: 8px 0 32px; display:flex; flex-direction:column; align-items:center; gap:0;">
+      <button class="c-btn" id="c-next-btn" onclick="cNextStep()" style="width:100%;max-width:340px;">Continuar →</button>
+    </div>
+
+  </div><!-- end c-container -->
+
+  <!-- Results -->
+  <div class="c-results" id="c-results">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px;">
+      <button onclick="cGoBackFromResults()" style="background:none;border:1.5px solid #E5E1D8;padding:8px 16px;border-radius:50px;font-family:'Epilogue',sans-serif;font-size:13px;font-weight:500;color:#6B7280;cursor:pointer;transition:all .2s;" onmouseover="this.style.borderColor='#0D1B3E';this.style.color='#0D1B3E'" onmouseout="this.style.borderColor='#E5E1D8';this.style.color='#6B7280'">← Modificar respuestas</button>
+      <button onclick="cRestart()" style="background:none;border:none;font-size:13px;color:#9CA3AF;cursor:pointer;font-family:'Epilogue',sans-serif;padding:8px;">Empezar de nuevo</button>
+    </div>
+    <div class="c-result-hero">
+      <div class="c-result-label">Tu embarazo podría costar entre</div>
+      <div class="c-result-range">RD$<span class="cn" id="c-res-min">0</span> – RD$<span class="cn" id="c-res-max">0</span></div>
+      <div class="c-result-sub">Dependiendo del hospital, tipo de parto y posibles complicaciones en República Dominicana.</div>
+    </div>
+    <div>
+      <div class="c-section-hdr"><h4>Desglose de costos</h4><div class="c-section-line"></div></div>
+      <div class="c-breakdown" id="c-breakdown"></div>
+    </div>
+    <div>
+      <div class="c-section-hdr"><h4>Con vs. sin seguro</h4><div class="c-section-line"></div></div>
+      <div class="c-comp-card">
+        <div class="c-comp-grid">
+          <div class="c-comp-wo"><div class="c-comp-lbl">Sin seguro</div><div class="c-comp-amt" id="c-comp-wo">RD$0</div><div style="font-size:11px;color:#EF4444;margin-top:3px;">Pago directo</div></div>
+          <div class="c-comp-wi"><div class="c-comp-lbl">Con cobertura</div><div class="c-comp-amt" id="c-comp-wi">RD$0</div><div style="font-size:11px;color:#22C55E;margin-top:3px;">Estimado con plan</div></div>
+        </div>
+        <div class="c-savings" id="c-savings">💚 Podrías ahorrar más de RD$0</div>
+        <div class="c-disc"><div style="font-size:11px;font-weight:700;color:#9CA3AF;text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px;">Ejemplo de plan recomendado</div><div id="c-disclaimer" style="font-size:13px;color:#4B5563;line-height:1.6;"></div><div style="font-size:11px;color:#9CA3AF;margin-top:6px;">* Precios de referencia. Sujeto a evaluación médica.</div></div>
+      </div>
+    </div>
+    <div>
+      <div class="c-section-hdr"><h4>Alertas importantes</h4><div class="c-section-line"></div></div>
+      <div class="c-risk-cards" id="c-risks"></div>
+    </div>
+    <div class="c-score-row" id="c-score-row">
+      <div style="position:relative;flex-shrink:0;">
+        <svg width="58" height="58" viewBox="0 0 58 58">
+          <circle cx="29" cy="29" r="23" fill="none" stroke="#EDEAE3" stroke-width="4.5"/>
+          <circle cx="29" cy="29" r="23" fill="none" stroke="#4F50FF" stroke-width="4.5"
+            stroke-linecap="round" stroke-dasharray="144.5" stroke-dashoffset="144.5"
+            id="c-score-arc" transform="rotate(-90 29 29)"
+            style="transition:stroke-dashoffset 1.2s cubic-bezier(.4,0,.2,1);"/>
+        </svg>
+        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;color:#0D1B3E;" id="c-score-num">0</div>
+      </div>
+      <div style="flex:1;">
+        <div style="font-size:11px;font-weight:700;color:#9CA3AF;text-transform:uppercase;letter-spacing:.08em;margin-bottom:2px;">Coverage Match Score</div>
+        <div style="font-size:14px;font-weight:600;color:#0D1B3E;" id="c-score-label">Calculando…</div>
+        <div style="font-size:11px;color:#9CA3AF;margin-top:2px;">Períodos de espera · Presupuesto · Extras</div>
+      </div>
+    </div>
+    <!-- CTA -->
+    <div class="c-cta-block">
+      <div style="position:absolute;top:-40px;right:-40px;width:160px;height:160px;background:radial-gradient(circle,rgba(79,80,255,.35),transparent 70%);border-radius:50%;pointer-events:none;"></div>
+      <div style="position:relative;z-index:2;">
+        <div style="display:inline-block;background:rgba(79,80,255,.25);border:1px solid rgba(79,80,255,.4);color:#a5b4ff;font-size:11px;font-weight:600;padding:4px 12px;border-radius:20px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:14px;">Asesoría 100% gratuita</div>
+        <div style="font-size:clamp(20px,4vw,26px);font-weight:700;color:white;line-height:1.2;margin-bottom:8px;">Habla con un asesor y<br>encuentra tu plan ideal</div>
+        <div style="font-size:13px;color:rgba(255,255,255,.6);line-height:1.6;margin-bottom:20px;max-width:300px;margin-left:auto;margin-right:auto;">Te contactamos hoy mismo para recomendarte el seguro que mejor protege tu embarazo.</div>
+        <div style="display:flex;flex-direction:column;gap:8px;max-width:340px;margin:0 auto;">
+          <input id="c-lead-name" type="text" placeholder="Tu nombre completo" style="width:100%;border:1.5px solid rgba(255,255,255,.15);border-radius:10px;padding:12px 14px;font-family:'Epilogue',sans-serif;font-size:14px;color:white;background:rgba(255,255,255,.08);outline:none;" onfocus="this.style.borderColor='rgba(79,80,255,.8)'" onblur="this.style.borderColor='rgba(255,255,255,.15)'">
+          <input id="c-lead-phone" type="tel" placeholder="WhatsApp (809) 000-0000" style="width:100%;border:1.5px solid rgba(255,255,255,.15);border-radius:10px;padding:12px 14px;font-family:'Epilogue',sans-serif;font-size:14px;color:white;background:rgba(255,255,255,.08);outline:none;" onfocus="this.style.borderColor='rgba(79,80,255,.8)'" onblur="this.style.borderColor='rgba(255,255,255,.15)'">
+          <button onclick="cSubmitLead()" id="c-submit-btn" style="width:100%;background:linear-gradient(135deg,#4F50FF,#7B7CFF);color:white;border:none;padding:15px;border-radius:50px;font-family:'Epilogue',sans-serif;font-weight:700;font-size:15px;cursor:pointer;transition:all .25s;margin-top:4px;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 24px rgba(79,80,255,.4)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'">Solicitar cotización gratuita →</button>
+        </div>
+        <div style="font-size:11px;color:rgba(255,255,255,.3);margin-top:12px;">Sin compromisos · Respuesta en menos de 1 hora</div>
+      </div>
+    </div>
+    <div style="height:40px;"></div>
+  </div><!-- end c-results -->
+
+
+
+</div><!-- end calc-wrap -->
+
+<script>
+// ── CALC STATE (prefixed to avoid conflicts)
+const cState = {
+  currentStep: 1, totalSteps: 6,
+  pregStatus: null, deliveryType: null,
+  insuranceStatus: null, extras: new Set(),
+  budget: 8000, budgetMin: 3000, coverageTier: null,
+};
+
+let cCurrentTier = null;
+
+const cCoverageTiers = {
+  basic:    { min:3000, max:5500,   emoji:'🌱', hint:'Con cobertura básica tienes lo esencial. Ideal si ya tienes plan colectivo del trabajo que complementar.' },
+  complete: { min:5500, max:12000,  emoji:'⭐', hint:'La opción más popular en RD. Cubre consultas, laboratorios, epidural y recién nacido.' },
+  premium:  { min:12000, max:35000, emoji:'💎', hint:'Cobertura sin límites: NICU, habitación privada, médico de tu elección y cobertura internacional.' },
+};
+
+function cUpdateProgress() {
+  const pct = ((cState.currentStep-1)/cState.totalSteps)*100;
+  document.getElementById('c-progress-fill').style.width = pct+'%';
+  document.getElementById('c-step-counter').textContent = cState.currentStep <= cState.totalSteps ? `${cState.currentStep} de ${cState.totalSteps}` : '';
+}
+
+function cShowStep(n) {
+  document.querySelectorAll('.c-step').forEach(s=>s.classList.remove('active'));
+  const el = document.getElementById('c-step-'+n);
+  if(el) el.classList.add('active');
+  cState.currentStep = n;
+  cUpdateProgress();
+  const backBtn = document.getElementById('c-back-btn');
+  backBtn.style.visibility = n>1 ? 'visible' : 'hidden';
+  const nextBtn = document.getElementById('c-next-btn');
+  nextBtn.textContent = n===cState.totalSteps ? 'Ver mi estimado →' : 'Continuar →';
+  // Scroll to top of calc smoothly
+  const calcWrap = document.getElementById('calc-wrap');
+  if(calcWrap) calcWrap.scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+function cNextStep() {
+  if(cState.currentStep < cState.totalSteps) { cState.currentStep++; cShowStep(cState.currentStep); }
+  else cShowLoading();
+}
+function cPrevStep() {
+  if(cState.currentStep > 1) { cState.currentStep--; cShowStep(cState.currentStep); }
+}
+
+function cSelect(el, groupId, key, val) {
+  document.querySelectorAll('#'+groupId+' .c-option').forEach(o=>o.classList.remove('selected'));
+  el.classList.add('selected');
+  cState[key] = val;
+  if(key==='pregStatus') {
+    document.getElementById('c-preg-warn').style.display = (val!=='none') ? 'flex' : 'none';
+  }
+}
+function cSelectGrid(el, groupId, key, val) {
+  document.querySelectorAll('#'+groupId+' .c-grid-card').forEach(o=>o.classList.remove('selected'));
+  el.classList.add('selected'); cState[key]=val;
+  document.getElementById('c-cesarea-warn').style.display = val==='cesarea' ? 'flex':'none';
+}
+function cShowInsFields(show) {
+  document.getElementById('c-ins-fields').classList.toggle('visible',show);
+}
+function cToggleCheck(el, group, val) {
+  el.classList.toggle('checked');
+  if(el.classList.contains('checked')) cState.extras.add(val); else cState.extras.delete(val);
+}
+
+function cSelectCoverage(el) {
+  document.querySelectorAll('#c-coverage-opts .c-option').forEach(o=>o.classList.remove('selected'));
+  el.classList.add('selected');
+  cCurrentTier = el.dataset.val;
+  cState.coverageTier = cCurrentTier;
+  const tier = cCoverageTiers[cCurrentTier];
+  cState.budgetMin=tier.min; cState.budget=Math.round((tier.min+tier.max)/2);
+  const wrap = document.getElementById('c-price-range');
+  wrap.style.display='block'; wrap.style.animation='cStepIn .3s ease both';
+  document.getElementById('c-range-emoji').textContent=tier.emoji;
+  document.getElementById('c-budget-hint').textContent=tier.hint;
+  document.getElementById('c-budget-slider').value=50;
+  cUpdateSlider(50);
+}
+
+function cGetSliderColor(pct) {
+  if(pct<=75){const t=pct/75;return `rgb(${Math.round(147+(79-147)*t)},${Math.round(197+(80-197)*t)},${Math.round(253+(255-253)*t)})`;}
+  else{const t=(pct-75)/25;return `rgb(${Math.round(79+(13-79)*t)},${Math.round(80+(27-80)*t)},${Math.round(255+(62-255)*t)})`;}
+}
+function cUpdateSlider(pct) {
+  pct=parseInt(pct);
+  const val = pct<=75 ? Math.round(2500+((15000-2500)*(pct/75))) : Math.round(15000+((50000-15000)*((pct-75)/25)));
+  const valPlus = pct<=75 ? Math.round(val*1.3) : Math.round(val*1.15);
+  cState.budget=val;
+  document.getElementById('c-range-min').textContent=val.toLocaleString('es-DO');
+  document.getElementById('c-range-max').textContent=valPlus.toLocaleString('es-DO');
+  const col=cGetSliderColor(pct);
+  const sl=document.getElementById('c-budget-slider');
+  sl.style.background=`linear-gradient(to right,${col} ${pct}%,#E5E1D8 ${pct}%)`;
+  const tip=document.getElementById('c-slider-tip');
+  tip.textContent=`RD$${val.toLocaleString('es-DO')}/mes`;
+  tip.style.left=pct+'%'; tip.style.background=col;
+  if(!cCurrentTier) return;
+  const hints={4000:'💡 Planes básicos de SeNaSa Larimar y Palic. Cubren lo esencial del parto.',8000:'💡 Rango ideal para planes completos de Humano y Universal.',15000:'💡 Planes Gold de Mapfre BHD y Universal Premium con cobertura ampliada.'};
+  document.getElementById('c-budget-hint').textContent = val<4000?hints[4000]:val<8000?hints[8000]:val<15000?hints[15000]:'💡 Planes premium de Humano Global Health y Bupa. Cobertura sin límites incluyendo hospitales privados top.';
+}
+
+const cLoadingMsgs = ['Analizando costos hospitalarios…','Comparando cobertura médica…','Calculando riesgos financieros…','Detectando períodos de espera…','Evaluando cobertura de maternidad…','Preparando tu reporte personalizado…'];
+let cMsgIdx=0, cMsgInt;
+
+function cShowLoading() {
+  document.getElementById('c-quiz').style.display='none';
+
+  const load=document.getElementById('c-loading');
+  load.classList.add('visible');
+  document.getElementById('c-progress-fill').style.width='95%';
+  cMsgIdx=0;
+  document.getElementById('c-loading-msg').textContent=cLoadingMsgs[0];
+  cMsgInt=setInterval(()=>{
+    cMsgIdx=(cMsgIdx+1)%cLoadingMsgs.length;
+    const el=document.getElementById('c-loading-msg');
+    el.style.opacity='0';
+    setTimeout(()=>{el.textContent=cLoadingMsgs[cMsgIdx];el.style.opacity='1';},300);
+  },1800);
+  setTimeout(()=>{clearInterval(cMsgInt);load.classList.remove('visible');cShowResults();},5000);
+}
+
+function cCalcCosts() {
+  const delivery=cState.deliveryType; const city=document.getElementById('c-city').value;
+  const extras=cState.extras;
+  let dMin=45000,dMax=120000;
+  if(delivery==='cesarea'){dMin=70000;dMax=250000;}
+  else if(delivery==='unsure'){dMin=55000;dMax=185000;}
+  const mult=city==='pc'?1.35:city==='sd'?1.15:1;
+  const tw=extras.has('twins')?1.5:1;
+  const items=[
+    {icon:'🏥',name:'Hospitalización y parto',sub:delivery==='cesarea'?'Cesárea':delivery==='natural'?'Parto natural':'Estimado mixto',min:Math.round(dMin*mult),max:Math.round(dMax*mult),w:.45},
+    {icon:'🩺',name:'Consultas y seguimiento',sub:'10–12 consultas prenatales',min:Math.round(30000*mult),max:Math.round(78000*mult),w:.18},
+    {icon:'🧪',name:'Laboratorios y sonografías',sub:'Análisis y ultrasonidos',min:Math.round(15000*mult),max:Math.round(80000*mult),w:.15},
+    {icon:'💊',name:'Medicamentos y vitaminas',sub:'9 meses de tratamiento',min:Math.round(18000*mult),max:Math.round(72000*mult),w:.10},
+    ...(extras.has('private-room')?[{icon:'🛏️',name:'Habitación privada',sub:'Upgrade durante la estadía',min:5000,max:35000,w:.05}]:[]),
+    ...(extras.has('nicu')?[{icon:'👶',name:'NICU / Incubadora',sub:'Cuidados intensivos neonatales',min:25000,max:150000,w:.07}]:[]),
+    ...(extras.has('newborn')?[{icon:'🍼',name:'Recién nacido',sub:'Pediatría post-parto',min:8000,max:25000,w:.05}]:[]),
+  ];
+  const tMin=Math.round(items.reduce((a,i)=>a+i.min,0)*tw);
+  const tMax=Math.round(items.reduce((a,i)=>a+i.max,0)*tw);
+  return {total:{min:tMin,max:tMax},breakdown:items};
+}
+
+function cCalcScore() {
+  let s=70;
+  if(cState.insuranceStatus==='yes')s+=10; else if(cState.insuranceStatus==='looking')s+=5;
+  if(cState.pregStatus==='none')s+=8; else if(cState.pregStatus==='t1')s-=5; else if(cState.pregStatus==='t2')s-=10; else if(cState.pregStatus==='t3')s-=15;
+  if(cState.budget>=12000)s+=8; else if(cState.budget>=8000)s+=4; else s-=4;
+  if(cState.extras.has('nicu'))s-=3; if(cState.extras.has('twins'))s-=5; if(cState.extras.has('fertility'))s-=4;
+  return Math.min(98,Math.max(35,s));
+}
+
+function cGenRisks() {
+  const risks=[]; const preg=cState.pregStatus; const delivery=cState.deliveryType;
+  const extras=cState.extras; const hospital=document.getElementById('c-hospital').value;
+  if(preg==='t2'||preg==='t3') risks.push({lvl:'high',icon:'⏰',title:'Período de espera',text:'Tu embarazo podría NO estar cubierto. La mayoría de planes tienen períodos de espera de 10–12 meses para maternidad.'});
+  if(preg==='t1') risks.push({lvl:'med',icon:'⚠️',title:'Cobertura limitada',text:'En el primer trimestre algunos planes podrían aceptarte con restricciones. Actúa rápido.'});
+  if(delivery==='cesarea') risks.push({lvl:'med',icon:'🔪',title:'Costo de cesárea',text:'Las cesáreas aumentan el costo total hasta un 80%. Verifica que tu plan la cubra completamente.'});
+  if(extras.has('nicu')) risks.push({lvl:'high',icon:'🏥',title:'Cobertura NICU',text:'Muchos planes en RD NO cubren NICU completamente o tienen límites bajos.'});
+  if(extras.has('twins')) risks.push({lvl:'high',icon:'👫',title:'Embarazo múltiple',text:'Los gemelos aumentan el costo 50–100% y elevan el riesgo de complicaciones.'});
+  if(hospital) risks.push({lvl:'med',icon:'📍',title:'Hospital fuera de red',text:`"${hospital}" podría estar fuera de red de algunas aseguradoras. Verifica antes de elegir.`});
+  if(cState.insuranceStatus==='no') risks.push({lvl:'high',icon:'💸',title:'Sin cobertura',text:'Sin seguro, el 100% del costo corre por tu cuenta. Un día de hospitalización puede costar RD$15,000+.'});
+  if(!risks.length) risks.push({lvl:'med',icon:'✅',title:'Perfil favorable',text:'Tu situación tiene bajo riesgo. Con el plan correcto estarás bien protegida.'});
+  return risks;
+}
+
+function cAnimCounter(el,target,dur=1200) {
+  const start=performance.now();
+  const fmt=n=>Math.round(n).toLocaleString('es-DO');
+  (function tick(now){
+    const t=Math.min((now-start)/dur,1);
+    const ease=1-Math.pow(1-t,3);
+    el.textContent=fmt(target*ease);
+    if(t<1)requestAnimationFrame(tick);
+  })(start);
+}
+
+function cShowResults() {
+  document.getElementById('c-results').classList.add('visible');
+  document.getElementById('c-progress-fill').style.width='100%';
+  document.getElementById('c-step-counter').textContent='';
+  document.getElementById('c-results').scrollIntoView({behavior:'smooth',block:'start'});
+
+  const costs=cCalcCosts(); const score=cCalcScore(); const risks=cGenRisks();
+  setTimeout(()=>{
+    cAnimCounter(document.getElementById('c-res-min'),costs.total.min,1200);
+    cAnimCounter(document.getElementById('c-res-max'),costs.total.max,1500);
+  },200);
+
+  const bd=document.getElementById('c-breakdown'); bd.innerHTML='';
+  const mx=costs.total.max;
+  costs.breakdown.forEach((item,i)=>{
+    const card=document.createElement('div'); card.className='c-bcard'; card.style.animationDelay=i*.08+'s';
+    const pct=Math.round((item.max/mx)*100);
+    card.innerHTML=`<div class="c-bleft"><div style="font-size:22px;">${item.icon}</div><div><div class="c-bname">${item.name}</div><div class="c-bsub">${item.sub}</div><div class="c-bbar"><div class="c-bbar-fill" style="width:0%" data-w="${pct}"></div></div></div></div><div class="c-bamount">RD$${item.min.toLocaleString('es-DO')}<br><span style="font-size:10px;color:#9CA3AF;font-weight:400;">– ${item.max.toLocaleString('es-DO')}</span></div>`;
+    bd.appendChild(card);
+  });
+  setTimeout(()=>document.querySelectorAll('#c-breakdown .c-bbar-fill').forEach(b=>b.style.width=b.dataset.w+'%'),400);
+
+  const wo=costs.total.max, wi=Math.round(wo*.2), sav=wo-wi;
+  document.getElementById('c-comp-wo').textContent='RD$'+wo.toLocaleString('es-DO');
+  document.getElementById('c-comp-wi').textContent='RD$'+wi.toLocaleString('es-DO')+' – '+Math.round(wo*.35).toLocaleString('es-DO');
+  document.getElementById('c-savings').textContent='💚 Podrías ahorrar más de RD$'+Math.round(sav*.75).toLocaleString('es-DO');
+
+  const discs={basic:{plan:'Plan Básico Maternidad',entity:'SeNaSa Larimar',price:'Desde RD$3,200/mes',covers:'Parto natural o cesárea · Hospitalización · Consultas prenatales · Laboratorios básicos'},complete:{plan:'Plan Mi Salud Maternidad',entity:'Humano Seguros',price:'Desde RD$6,800/mes',covers:'Parto + cesárea · 10 consultas prenatales · Sonografías · Epidural · Recién nacido 30 días'},premium:{plan:'Plan Global Health Premium',entity:'Humano / Mapfre BHD',price:'Desde RD$13,500/mes',covers:'Cobertura ilimitada · NICU · Habitación privada · Doctor específico · Cobertura internacional'}};
+  const d=discs[cState.coverageTier]||discs.complete;
+  document.getElementById('c-disclaimer').innerHTML=`<div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:6px;"><div><div style="font-weight:600;color:#0D1B3E;font-size:13px;">${d.plan}</div><div style="color:#4F50FF;font-size:12px;font-weight:600;">${d.entity}</div><div style="font-size:11px;color:#9CA3AF;margin-top:3px;">${d.covers}</div></div><div style="font-weight:700;color:#4F50FF;font-size:13px;white-space:nowrap;">${d.price}</div></div>`;
+
+  const rc=document.getElementById('c-risks'); rc.innerHTML='';
+  risks.forEach((r,i)=>{const card=document.createElement('div');card.className='c-risk '+r.lvl;card.style.animationDelay=i*.08+'s';card.innerHTML=`<div style="font-size:16px;">${r.icon}</div><div class="c-risk-text"><strong>${r.title}</strong>${r.text}</div>`;rc.appendChild(card);});
+
+  setTimeout(()=>{
+    cAnimCounter(document.getElementById('c-score-num'),score,1200);
+    const arc=document.getElementById('c-score-arc');
+    const offset=144.5-(score/100)*144.5;
+    arc.style.strokeDashoffset=offset;
+    arc.style.stroke=score>=80?'#10B981':score>=65?'#4F50FF':'#F97316';
+    document.getElementById('c-score-label').textContent=score>=80?'Perfil favorable para cobertura completa':score>=65?'Buen perfil, algunos factores a revisar':'Requiere atención — hay riesgos de cobertura';
+  },600);
+}
+
+function cGoBackFromResults() {
+  document.getElementById('c-results').classList.remove('visible');
+  document.getElementById('c-quiz').style.display='block';
+
+  cShowStep(cState.totalSteps);
+}
+
+function cRestart() {
+  Object.assign(cState,{currentStep:1,pregStatus:null,deliveryType:null,insuranceStatus:null,extras:new Set(),budget:8000,budgetMin:3000,coverageTier:null});
+  cCurrentTier=null;
+  document.getElementById('c-results').classList.remove('visible');
+  document.getElementById('c-quiz').style.display='block';
+
+  document.querySelectorAll('#calc-wrap .c-option, #calc-wrap .c-grid-card').forEach(o=>o.classList.remove('selected'));
+  document.querySelectorAll('#calc-wrap .c-check-item').forEach(o=>o.classList.remove('checked'));
+  document.getElementById('c-ins-fields').classList.remove('visible');
+  document.getElementById('c-price-range').style.display='none';
+  document.getElementById('c-preg-warn').style.display='none';
+  document.getElementById('c-cesarea-warn').style.display='none';
+  cClearHospital();
+  cShowStep(1);
+}
+
+function cSubmitLead() {
+  const name=document.getElementById('c-lead-name').value;
+  const phone=document.getElementById('c-lead-phone').value;
+  if(!name||!phone){alert('Por favor ingresa tu nombre y WhatsApp.');return;}
+  const msg=encodeURIComponent(`Hola, soy ${name} y acabo de usar la calculadora de maternidad de Kubre. Estoy interesada en recibir recomendaciones de cobertura y una cotización personalizada.`);
+  const btn=document.getElementById('c-submit-btn');
+  btn.textContent='✓ En camino!'; btn.style.background='linear-gradient(135deg,#10B981,#059669)'; btn.disabled=true;
+  setTimeout(()=>window.open(`https://wa.me/8293992257?text=${msg}`,'_blank'),800);
+}
+
+// Hospital dropdown
+const cHospitals=['Centro Médico UCE','Centro Médico HOMS','Clínica Cruz Jiminián','Hospital General de la Plaza de la Salud','Centro Médico Punta Cana','Clínica Abreu','Hospital Salvador B. Gautier','Centro de Diagnóstico CEDIMAT','Clínica Corominas','Hospital Ney Arias Lora','Clínica Unión Médica','Centro Médico Bournigal'];
+function cRenderHospitals(list){document.getElementById('c-hospital-list').innerHTML=list.length?list.map(h=>`<div onclick="cPickHospital('${h}')" style="padding:11px 14px;font-size:13px;color:#0D1B3E;cursor:pointer;border-bottom:1px solid #E5E1D8;transition:background .15s;" onmouseover="this.style.background='#F5F3EE'" onmouseout="this.style.background='transparent'">🏥 ${h}</div>`).join(''):'<div style="padding:11px 14px;font-size:13px;color:#9CA3AF;">No se encontraron hospitales</div>';}
+function cShowHospitalDD(){cFilterHospitals(document.getElementById('c-hospital').value);document.getElementById('c-hospital-dd').style.display='block';}
+function cHideHospitalDD(){document.getElementById('c-hospital-dd').style.display='none';}
+function cFilterHospitals(v){const f=v.trim()?cHospitals.filter(h=>h.toLowerCase().includes(v.toLowerCase())):cHospitals;cRenderHospitals(f);const clr=document.getElementById('c-hospital-clear');if(clr)clr.style.display=v?'flex':'none';}
+function cPickHospital(n){document.getElementById('c-hospital').value=n;const clr=document.getElementById('c-hospital-clear');if(clr)clr.style.display='flex';cHideHospitalDD();}
+function cClearHospital(){document.getElementById('c-hospital').value='';const clr=document.getElementById('c-hospital-clear');if(clr)clr.style.display='none';cFilterHospitals('');}
+cRenderHospitals(cHospitals);
+
+// Init
+cShowStep(1);
+</script>
+
+</div><!-- end page-maternidad -->
 
 <!-- FOOTER (shared) -->
 <footer>
